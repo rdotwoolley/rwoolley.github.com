@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-01-18T21:17:13-07:00</updated>
+  <updated>2012-01-18T21:20:07-07:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -18,9 +18,7 @@
     <link href="http://rwoolley.github.com/blog/2012/01/18/hello-octopress/"/>
     <updated>2012-01-18T19:57:00-07:00</updated>
     <id>http://rwoolley.github.com/blog/2012/01/18/hello-octopress</id>
-    <content type="html"><![CDATA[<h1>First Post with Octopress</h1>
-
-<p>So I&#8217;ve switched to Octopress.  I am quite impressed with it and markdown.
+    <content type="html"><![CDATA[<p>So I&#8217;ve switched to Octopress.  I am quite impressed with it and markdown.
 Elegantly simple.  This might even encourage me blog more.</p>
 ]]></content>
   </entry>
