@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello Octopress - rdotwoolley</title>
+  <title>Postfix - rdotwoolley</title>
   <meta name="author" content="Robert Woolley">
 
   
-  <meta name="description" content="So I&#8217;ve switched to Octopress. I am quite impressed with it and markdown.
-Elegantly simple. This might even encourage me blog more.
-">
+  <meta name="description" content="Recently the team was working on some stuff in EC2. This is a bit new for us so
+we&#8217;re figuring many things out as we go. One thing work sharing &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ Elegantly simple. This might even encourage me blog more.
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rwoolley.github.com/blog/2012/01/18/hello-octopress">
+  <link rel="canonical" href="http://rwoolley.github.com/blog/2012/01/23/postfix">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -70,7 +69,7 @@ Elegantly simple. This might even encourage me blog more.
   
   <header>
     
-      <h1 class="entry-title">Hello Octopress</h1>
+      <h1 class="entry-title">Postfix</h1>
     
     
       <p class="meta">
@@ -86,15 +85,33 @@ Elegantly simple. This might even encourage me blog more.
   
 
 
-<time datetime="2012-01-18T19:57:00-07:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
+<time datetime="2012-01-23T20:33:00-07:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>So I&#8217;ve switched to Octopress.  I am quite impressed with it and markdown.
-Elegantly simple.  This might even encourage me blog more.</p>
+<div class="entry-content"><p>Recently the team was working on some stuff in EC2. This is a bit new for us so
+we&#8217;re figuring many things out as we go.  One thing work sharing is integrating
+a PHP web app running in EC2 to Amazon&#8217;s Simple Email Service.  Following the
+guides gets you 90% of the way but the last mile had a snag.  Full disclosure,
+none of us is email experts.</p>
+
+<p>We implemented the PHP - Postfix - Stunnel - SES approach advocated by AWS.
+The older option used [perl] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/Scripts.MTAs.Postfix.html) and worked for us.  However, we did want to go after the best practice approach and it&#8217;s outlined with the [postfix setup] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.Postfix.html) and the [stunnel] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.SecureTunnel.html) setup.</p>
+
+<p>The snag we hit was as follows: using the perl tools we could queue an email in
+SES.  Note, when in sandbox mode you can only send to and from the verified
+email addresses.  Do yourself a solid and setup two addresses.  Otherwise
+reading the mail.log file will blow your mind.  When we tried to queue an email
+from our PHP app through postfix across the stunnel to SES the to and from
+fields were, in a word, effed up.  Turns out setting the MyDestination
+parameter in the main.cf file of the postfix config was the culprit.  Also, in
+our PHP.ini file we ensure that we were starting sendmail with the suggested
+unix flags but that&#8217;s a red herring for this issue.  Our solution was to unset
+the MyDestination parm and pow.  Up and running.  We think.  Here&#8217;s to a great
+push by @ericchernuka, @dannydotellis, and @swinglinetrade to solve a stinker.</p>
 </div>
 
 
@@ -117,15 +134,21 @@ Elegantly simple.  This might even encourage me blog more.</p>
   
 
 
-<time datetime="2012-01-18T19:57:00-07:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
+<time datetime="2012-01-23T20:33:00-07:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/aws-/'>AWS,</a>, <a class='category' href='/blog/categories/ses/'>SES</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2012/01/18/hello-octopress/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2012/01/18/hello-octopress/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2012/01/23/postfix/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2012/01/23/postfix/" >Tweet</a>
   
   
   
@@ -134,8 +157,8 @@ Elegantly simple.  This might even encourage me blog more.</p>
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/01/18/hello-octopress/" title="Previous Post: Hello Octopress">&laquo; Hello Octopress</a>
       
-        <a class="basic-alignment right" href="/blog/2012/01/23/postfix/" title="next Post: Postfix">Postfix &raquo;</a>
       
     </p>
   </footer>

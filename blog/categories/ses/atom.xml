@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[rdotwoolley]]></title>
-  <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: SES | rdotwoolley]]></title>
+  <link href="http://rwoolley.github.com/blog/categories/ses/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
   <updated>2012-01-23T20:45:25-07:00</updated>
   <id>http://rwoolley.github.com/</id>
@@ -19,13 +19,13 @@
     <updated>2012-01-23T20:33:00-07:00</updated>
     <id>http://rwoolley.github.com/blog/2012/01/23/postfix</id>
     <content type="html"><![CDATA[<p>Recently the team was working on some stuff in EC2. This is a bit new for us so
-we&#8217;re figuring many things out as we go.  One thing work sharing is integrating
-a PHP web app running in EC2 to Amazon&#8217;s Simple Email Service.  Following the
+we're figuring many things out as we go.  One thing work sharing is integrating
+a PHP web app running in EC2 to Amazon's Simple Email Service.  Following the
 guides gets you 90% of the way but the last mile had a snag.  Full disclosure,
 none of us is email experts.</p>
 
 <p>We implemented the PHP - Postfix - Stunnel - SES approach advocated by AWS.
-The older option used [perl] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/Scripts.MTAs.Postfix.html) and worked for us.  However, we did want to go after the best practice approach and it&#8217;s outlined with the [postfix setup] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.Postfix.html) and the [stunnel] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.SecureTunnel.html) setup.</p>
+The older option used [perl] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/Scripts.MTAs.Postfix.html) and worked for us.  However, we did want to go after the best practice approach and it's outlined with the [postfix setup] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.Postfix.html) and the [stunnel] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.SecureTunnel.html) setup.</p>
 
 <p>The snag we hit was as follows: using the perl tools we could queue an email in
 SES.  Note, when in sandbox mode you can only send to and from the verified
@@ -35,19 +35,9 @@ from our PHP app through postfix across the stunnel to SES the to and from
 fields were, in a word, effed up.  Turns out setting the MyDestination
 parameter in the main.cf file of the postfix config was the culprit.  Also, in
 our PHP.ini file we ensure that we were starting sendmail with the suggested
-unix flags but that&#8217;s a red herring for this issue.  Our solution was to unset
-the MyDestination parm and pow.  Up and running.  We think.  Here&#8217;s to a great
+unix flags but that's a red herring for this issue.  Our solution was to unset
+the MyDestination parm and pow.  Up and running.  We think.  Here's to a great
 push by @ericchernuka, @dannydotellis, and @swinglinetrade to solve a stinker.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello Octopress]]></title>
-    <link href="http://rwoolley.github.com/blog/2012/01/18/hello-octopress/"/>
-    <updated>2012-01-18T19:57:00-07:00</updated>
-    <id>http://rwoolley.github.com/blog/2012/01/18/hello-octopress</id>
-    <content type="html"><![CDATA[<p>So I&#8217;ve switched to Octopress.  I am quite impressed with it and markdown.
-Elegantly simple.  This might even encourage me blog more.</p>
 ]]></content>
   </entry>
   
