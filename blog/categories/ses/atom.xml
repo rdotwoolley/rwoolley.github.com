@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SES | rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/blog/categories/ses/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-01-23T20:45:25-07:00</updated>
+  <updated>2012-01-23T21:19:53-07:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -25,7 +25,7 @@ guides gets you 90% of the way but the last mile had a snag.  Full disclosure,
 none of us is email experts.</p>
 
 <p>We implemented the PHP - Postfix - Stunnel - SES approach advocated by AWS.
-The older option used [perl] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/Scripts.MTAs.Postfix.html) and worked for us.  However, we did want to go after the best practice approach and it's outlined with the [postfix setup] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.Postfix.html) and the [stunnel] (http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.SecureTunnel.html) setup.</p>
+The older option used <a href="http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/Scripts.MTAs.Postfix.html">perl</a> and worked for us.  However, we did want to go after the best practice approach and it's outlined with the <a href="http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.Postfix.html">postfix setup</a> and the <a href="http://docs.amazonwebservices.com/ses/latest/DeveloperGuide/SMTP.MTAs.SecureTunnel.html">stunnel</a> setup.</p>
 
 <p>The snag we hit was as follows: using the perl tools we could queue an email in
 SES.  Note, when in sandbox mode you can only send to and from the verified
