@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>DevOps - Where to start - rdotwoolley</title>
+  <meta name="author" content="Robert Woolley">
+
+  
+  <meta name="description" content="post rescued from my wordpress blog A little over a year ago one of the Systems Engineers on my team (@rhettdickson) suggested I look into DevOps and &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rwoolley.github.com/blog/2011/12/16/devops-where-to-start">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="rdotwoolley" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">rdotwoolley</a></h1>
+  
+    <h2>A blog about things.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rwoolley.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">DevOps - Where to Start</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-16T23:29:00-07:00" pubdate data-updated="true">Dec 16<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><em>post rescued from my wordpress blog</em></p>
+
+<p>A little over a year ago one of the Systems Engineers on my team (@rhettdickson) suggested I look into DevOps and maybe start adopting some of the practices.  What a prophetic suggestion.  Presently the Ops team at Calgary Scientific is in the midst of implementing many great DevOps ideas and practices.  I wanted to share some of the key things I have learned about getting started with DevOps.  This post is heavy on the links, twitter, blogs and opinions but I hope you find it interesting.</p>
+
+<!--more-->
+
+
+<p>What is DevOps?
+Well, that’s a loaded question.  I’ll start with what it’s not.  First, it’s not a team or a role.  If you have a DevOps team or a dedicated DevOps role I think you’re doing it wrong.  Secondly, it’s not a cult it’s a community.  An amazing, open, and strong community.  Just trawl through github and you’ll see hundreds of little projects aimed at getting things done and out the door as easily as possible.  The best part, no one hoards their knowledge or experience; they are all willing to share.</p>
+
+<p>So What is it?
+It’s a revolution to change the way we deploy solutions, manage the configuration of those deployments, leverage the cloud and perhaps best of all bridge the gap between the developer world and the operations world.  How do you get to there?  Well, here’s how I started.</p>
+
+<p>Twitter: Follow these people.
+Twitter is very active for DevOps, just watch the #devops topic and you’ll see.  There are many great tidbits that fly by during a day. This is the bare minimum list of people to follow on twitter.  Start here and add as you see fit.</p>
+
+<p>John E. Vincent: @lusis
+John is a DevOps badass.  He’s full of great ideas, sweet contributions to github and whenever I hit a snag chances are he’s already hit it, posted a blog entry about it, coded some sweetness and posted it on github.</p>
+
+<p>Chris Hartjes: @chartjes
+Chris is the great communicator of DevOps. Read his blog archives. I did and it’s been helping me win the battle within my organization to sell the concept of DevOps and its adoption. And he’s hilarious.</p>
+
+<p>Julian Simpson: @BuildDoctor
+Julian is the Doc Holliday of DevOps.  Got a continuous integration system in place and think it’s rock solid? Better be sure cuz he’s your huckleberry.  He’ll unplug it and make you prove the robustness.  Then show you where you went wrong and how to fix it.</p>
+
+<p>Gareth Rushgrove: @garethr
+Gareth is like Batman. Mild mannered gentleman by day  but prowling the rooftops looking for crappy build systems, lame deployment practices and beating it out of you by night.  This is mostly supposition but you’ll share my sentiments after following him.</p>
+
+<p>Websites:
+The proof is in the pudding.  If DevOps wasn’t a real thing then there wouldn’t be companies building tools and platforms for it.  There wouldn’t be meet ups, conferences or DevOps Days.  But there are all these things.  Here’s some useful links and blogs. Put these into Reeder, Early Edition, Google Reader or something equally useful.  RSS is old but still awesome.</p>
+
+<p><a href="http://www.opscode.com/">OpsCode</a>
+<a href="http://puppetlabs.com/">Puppet</a>
+<a href="https://github.com/">GitHub</a>
+<a href="http://www.build-doctor.com/">BuildDr</a>
+<a href="http://morethanseven.net/">morethanseven</a>
+<a href="http://blog.lusis.org/">Lusis</a>
+<a href="http://www.littlehart.net/atthekeyboard/">Hartjes</a></p>
+
+<p>One More Thing &#8230;
+Remember how I said Gareth Rushgrove was like Batman?  Here’s another reason why: he has his own digital Batcave for all things DevOps.  Every week he compiles a wonderful email with all the neatest stuff in the world of DevOps and sends it out.  This is the most important thing you can do: sign up for his email.  <a href="http://devopsweekly.com/">devopsWeekly</a></p>
+
+<p>There’s also an archive.  It’s the most accurate chronicle of the DevOps movement and laden with incredible information.  I wrote a script that pulled all the links out of the archive and pushed them to instapaper.  Then I read them all non-stop.</p>
+
+<p>So, this would be how I started learning.  Maybe this will help you too.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Woolley</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-16T23:29:00-07:00" pubdate data-updated="true">Dec 16<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/devops/'>DevOps</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2011/12/16/devops-where-to-start/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2011/12/16/devops-where-to-start/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/01/18/hello-octopress/" title="next Post: Hello Octopress">Hello Octopress &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/02/01/logging-as-a-service/">Logging as a Service</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/23/postfix/">Postfix</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/18/hello-octopress/">Hello Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/16/devops-where-to-start/">DevOps - Where to start</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/rwoolley">@rwoolley</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rwoolley',
+            count: 2,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rdotwoolley", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rdotwoolley" class="twitter-follow-button" data-show-count="false">Follow @rdotwoolley</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Robert Woolley -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
