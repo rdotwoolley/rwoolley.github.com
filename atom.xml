@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-01-23T21:19:53-07:00</updated>
+  <updated>2012-02-04T23:26:25-07:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Logging as a Service]]></title>
+    <link href="http://rwoolley.github.com/blog/2012/02/01/logging-as-a-service/"/>
+    <updated>2012-02-01T20:23:00-07:00</updated>
+    <id>http://rwoolley.github.com/blog/2012/02/01/logging-as-a-service</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been running into a logging challenge at work of late.  The usual issue.
+Lots of logs, in lots of places, retention policies, governance issues,
+reporting and (in my humble opinion the most important) support/debugging.  After some searching I
+found logg.ly and Papertrail which offered what I wanted as a service.  Very
+sweet.  Unfortunately I cannot use them in this implementation so I am pursuing
+Graylog2 and logstash (another blogpost on that later). Right now I&#8217;m plugging
+Papertrail into our demo system to see how it goes and how it fits with our
+workflow.  I just wanted to cover off some first impressions with Papertrail.</p>
+
+<!--more-->
+
+
+<ol>
+<li><p>Compatability
+We&#8217;re running RHEL 5.5 (don&#8217;t judge) so we&#8217;re using syslog. Luckily there is a
+little gem from the Papertrail folks that allows you to pipe your app logs into
+their service.  remote_syslog works very well!
+Ruby 1.8.7 is our ruby of choice for production systems.  We don&#8217;t put RVM on
+production boxes so our setup is simple in that regard.</p></li>
+<li><p>Ease of Use
+I love how I can see a window into all the events flying by. This sounds
+ridiculous but I can see issues just by watching patterns in the logs. It&#8217;s
+like using the force but it works for me.  Of course you can adjust the
+granularity to a specific system.  Search is the next best thing.  90% of my
+time spent grovelling in app logs is due to an issue.  Papertrail allows you to
+quickly match the user-time-wtf was going on tuple.  Better yet, you can save
+any search and run it later. Helpful when you want to see if a fix worked.</p></li>
+</ol>
+
+
+<p>First impressions are great at this point. I think Papertrail has legs.  The
+next phase of my thoughts will be around retention and compliance with acts
+like HIPAA.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Postfix]]></title>
