@@ -110,15 +110,21 @@ setting up a chef cookbook soon.</p>
 <ol>
 <li>Setup MongoDB
 So the mongo in the Ubuntu Repo is not the new hawtness. You&#8217;re best off to
-follow these steps to and get the <a href="http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages">latest</a>
+follow these steps to and get the <a href="http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages">latest</a></li>
+</ol>
 
-<ul>
-<li>sudo apt-key adv &#8211;keyserver keyserver.ubuntu.com &#8211;recv 7F0CEB10</li>
-<li>sudo echo -e &#8220;deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen\n&#8221; >> /etc/apt/sources.list</li>
-<li>sudo apt-get update</li>
-<li>sudo apt-get install mongodb-10gen</li>
-</ul>
-</li>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+</span><span class='line'>    - sudo echo -e "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen\n" >> /etc/apt/sources.list
+</span><span class='line'>    - sudo apt-get update
+</span><span class='line'>    - sudo apt-get install mongodb-10gen</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
 <li>Install the recommended JRE
 
 <ul>

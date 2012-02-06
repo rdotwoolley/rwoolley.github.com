@@ -4,7 +4,7 @@
   <title><![CDATA[Category: logging | rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/blog/categories/logging/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-02-05T17:57:14-07:00</updated>
+  <updated>2012-02-05T18:01:04-07:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -37,12 +37,16 @@ setting up a chef cookbook soon.</p>
 <li>Setup MongoDB
 So the mongo in the Ubuntu Repo is not the new hawtness. You're best off to
 follow these steps to and get the <a href="http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages">latest</a>
-
-<ul>
-<li>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10</li>
-<li>sudo echo -e "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen\n" >> /etc/apt/sources.list</li>
-<li>sudo apt-get update</li>
-<li>sudo apt-get install mongodb-10gen</li>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ul>
+</span><span class='line'>&lt;li>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10&lt;/li>
+</span><span class='line'>&lt;li>sudo echo -e "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen\n" >> /etc/apt/sources.list&lt;/li>
+</span><span class='line'>&lt;li>sudo apt-get update&lt;/li>
+</span><span class='line'>&lt;li>sudo apt-get install mongodb-10gen</span></code></pre></td></tr></table></div></figure></notextile></div></li>
 </ul>
 </li>
 <li>Install the recommended JRE
