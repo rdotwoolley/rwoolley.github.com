@@ -9,8 +9,8 @@
   <meta name="author" content="Robert Woolley">
 
   
-  <meta name="description" content="I&#8217;ve been running into a logging challenge at work of late. The usual issue.
-Lots of logs, in lots of places, retention policies, governance &hellip;">
+  <meta name="description" content="Logging! A repeat topic here these days. I have found myself in a position
+where there are multiple instances of our product running and logging the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,57 @@ Lots of logs, in lots of places, retention policies, governance &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/05/graylog2-and-dreamy-ocelots/">Graylog2 and Dreamy Ocelots</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-05T17:00:00-07:00" pubdate data-updated="true">Feb 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Logging! A repeat topic here these days. I have found myself in a position
+where there are multiple instances of our product running and logging the snot
+out of everything.  Point of interest: we cannot virtualize our product at this
+point due do an OpenGL dependency and the need for some serious GPU power. So,
+back to the main topic, how do you deal with logs all over the place? Logstash
+and Graylog2 (though @lusis is doing some crazy stuff with logstash and 0mq)
+are your best bet. For our testing we did a graylog2 implementatation on Ubuntu
+\11.10 and logstash running on RHEL 5.5 piping the logs to our graylog2
+instance.  I want to cover our setup (there are some learnings that are worth
+noting as most people are ripping Ubuntu 11.04) and I am leaning towards
+setting up a chef cookbook soon.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/02/05/graylog2-and-dreamy-ocelots/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -261,6 +312,10 @@ Elegantly simple.  This might even encourage me blog more.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/02/05/graylog2-and-dreamy-ocelots/">Graylog2 and Dreamy Ocelots</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/02/01/logging-as-a-service/">Logging as a Service</a>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: logging | rdotwoolley]]></title>
+  <link href="http://rwoolley.github.com/blog/categories/logging/atom.xml" rel="self"/>
+  <link href="http://rwoolley.github.com/"/>
+  <updated>2012-02-05T17:57:14-07:00</updated>
+  <id>http://rwoolley.github.com/</id>
+  <author>
+    <name><![CDATA[Robert Woolley]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Graylog2 and Dreamy Ocelots]]></title>
+    <link href="http://rwoolley.github.com/blog/2012/02/05/graylog2-and-dreamy-ocelots/"/>
+    <updated>2012-02-05T17:00:00-07:00</updated>
+    <id>http://rwoolley.github.com/blog/2012/02/05/graylog2-and-dreamy-ocelots</id>
+    <content type="html"><![CDATA[<p>Logging! A repeat topic here these days. I have found myself in a position
+where there are multiple instances of our product running and logging the snot
+out of everything.  Point of interest: we cannot virtualize our product at this
+point due do an OpenGL dependency and the need for some serious GPU power. So,
+back to the main topic, how do you deal with logs all over the place? Logstash
+and Graylog2 (though @lusis is doing some crazy stuff with logstash and 0mq)
+are your best bet. For our testing we did a graylog2 implementatation on Ubuntu
+\11.10 and logstash running on RHEL 5.5 piping the logs to our graylog2
+instance.  I want to cover our setup (there are some learnings that are worth
+noting as most people are ripping Ubuntu 11.04) and I am leaning towards
+setting up a chef cookbook soon.</p>
+
+<!-- more -->
+
+
+<ol>
+<li>Setup MongoDB
+So the mongo in the Ubuntu Repo is not the new hawtness. You're best off to
+follow these steps to and get the <a href="http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages">latest</a>
+
+<ul>
+<li>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10</li>
+<li>sudo echo -e "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen\n" >> /etc/apt/sources.list</li>
+<li>sudo apt-get update</li>
+<li>sudo apt-get install mongodb-10gen</li>
+</ul>
+</li>
+<li>Install the recommended JRE
+
+<ul>
+<li>sudo apt-get install openjdk-6-jre</li>
+</ul>
+</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

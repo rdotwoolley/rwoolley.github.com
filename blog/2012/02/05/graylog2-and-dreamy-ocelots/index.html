@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: DevOps - rdotwoolley</title>
+  <title>Graylog2 and Dreamy Ocelots - rdotwoolley</title>
   <meta name="author" content="Robert Woolley">
 
   
-  <meta name="description" content="Category: DevOps">
+  <meta name="description" content="Logging! A repeat topic here these days. I have found myself in a position
+where there are multiple instances of our product running and logging the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rwoolley.github.comblog/categories/devops">
+  <link rel="canonical" href="http://rwoolley.github.com/blog/2012/02/05/graylog2-and-dreamy-ocelots">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -64,35 +65,118 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: DevOps</h1>
+    
+      <h1 class="entry-title">Graylog2 and Dreamy Ocelots</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-05T17:00:00-07:00" pubdate data-updated="true">Feb 5<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Logging! A repeat topic here these days. I have found myself in a position
+where there are multiple instances of our product running and logging the snot
+out of everything.  Point of interest: we cannot virtualize our product at this
+point due do an OpenGL dependency and the need for some serious GPU power. So,
+back to the main topic, how do you deal with logs all over the place? Logstash
+and Graylog2 (though @lusis is doing some crazy stuff with logstash and 0mq)
+are your best bet. For our testing we did a graylog2 implementatation on Ubuntu
+\11.10 and logstash running on RHEL 5.5 piping the logs to our graylog2
+instance.  I want to cover our setup (there are some learnings that are worth
+noting as most people are ripping Ubuntu 11.04) and I am leaning towards
+setting up a chef cookbook soon.</p>
 
-  
-  <h2>2011</h2>
-
-<article>
-  
-<h1><a href="/blog/2011/12/16/devops-where-to-start/">DevOps - Where to start</a></h1>
-<time datetime="2011-12-16T23:29:00-07:00" pubdate><span class='month'>Dec</span> <span class='day'>16</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/devops/'>DevOps</a></span>
-</footer>
+<!-- more -->
 
 
-</article>
+<ol>
+<li>Setup MongoDB
+So the mongo in the Ubuntu Repo is not the new hawtness. You&#8217;re best off to
+follow these steps to and get the <a href="http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages">latest</a>
+
+<ul>
+<li>sudo apt-key adv &#8211;keyserver keyserver.ubuntu.com &#8211;recv 7F0CEB10</li>
+<li>sudo echo -e &#8220;deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen\n&#8221; >> /etc/apt/sources.list</li>
+<li>sudo apt-get update</li>
+<li>sudo apt-get install mongodb-10gen</li>
+</ul>
+</li>
+<li>Install the recommended JRE
+
+<ul>
+<li>sudo apt-get install openjdk-6-jre</li>
+</ul>
+</li>
+</ol>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Woolley</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-05T17:00:00-07:00" pubdate data-updated="true">Feb 5<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/logging/'>logging</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2012/02/05/graylog2-and-dreamy-ocelots/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2012/02/05/graylog2-and-dreamy-ocelots/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/01/logging-as-a-service/" title="Previous Post: Logging as a Service">&laquo; Logging as a Service</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
