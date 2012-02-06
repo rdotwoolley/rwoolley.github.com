@@ -4,7 +4,7 @@
   <title><![CDATA[Category: logging | rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/blog/categories/logging/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-02-05T18:41:35-07:00</updated>
+  <updated>2012-02-05T19:55:13-07:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -114,6 +114,57 @@ follow these steps to and get the <a href="http://www.mongodb.org/display/DOCS/U
 
 
 <h2>Graylog2 WebUI</h2>
+
+<p>A few points here:
+* For testing purposes we're just running the webui out of rails. I'm not sure
+  I'd do this in production
+* RVM wasn't installed. We don't do RVM in product environments. Ocelet's Ruby
+  is good enough to roll into production
+* I ran into issues with the date formats in the gemspec files. Just hack them
+A few points here:
+* For testing purposes we're just running the webui out of rails. I'm not sure
+  I'd do this in production
+* RVM wasn't installed. We don't do RVM in product environments. Ocelet's Ruby
+  is good enough to roll into production
+* I ran into issues with the date formats in the gemspec files. Just hack them</p>
+
+<ol>
+<li>Install Ruby
+Ocelot comes with 1.8.7 standard so there is nothing to do here.  RVM is
+definitely an option if you want.</li>
+<li>Get the Graylog2 WebUI and ramp up rails
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /opt/graylog2/
+</span><span class='line'>sudo wget https://github.com/downloads/Graylog2/graylog2-web-interface/graylog2-web-interface-0.9.6.tar.gz
+</span><span class='line'>sudo tar -xvf graylog2-web-interface-0.9.6.tar.gz
+</span><span class='line'>sudo ln -sf graylog2-web-interface-0.9.6 graylog2-web-interface
+</span><span class='line'>sudo apt-get install rubygems
+</span><span class='line'>sudo gem install bundler
+</span><span class='line'>sudo bundle install
+</span><span class='line'>sudo apt-get install rails</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+<li>Config and Launch</li>
+<li>Edit the mongoid.yml to match your config. I suggest commenting out the test
+and development sections.</li>
+<li>Launch the WebUI from the cmdline:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/opt/graylog2/graylog2-web-interface/scripts/rails server -e production</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+</ol>
+
+
+<h2>Annnnd you're done</h2>
+
+<p>At this point you should be read to rip logstash and start pumping all the logs
+into the server.  In a later post I will announce a sweet cookbook for this AND
+how to setup your logstash on the app server.  Also, I'm assessing how graylog2
+can assist in compliance situations (HIPAA, SOX, ISO, etc) so stay tuned for my
+thoughts and findings.</p>
 ]]></content>
   </entry>
   
