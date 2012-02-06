@@ -118,20 +118,51 @@ follow these steps to and get the <a href="http://www.mongodb.org/display/DOCS/U
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>- sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-</span><span class='line'>    - sudo echo -e "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen\n" >> /etc/apt/sources.list
-</span><span class='line'>    - sudo apt-get update
-</span><span class='line'>    - sudo apt-get install mongodb-10gen</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+</span><span class='line'>    sudo echo -e "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen\n" >> /etc/apt/sources.list
+</span><span class='line'>    sudo apt-get update
+</span><span class='line'>    sudo apt-get install mongodb-10gen</span></code></pre></td></tr></table></div></figure>
 
 
 <ol>
-<li>Install the recommended JRE
-
-<ul>
-<li>sudo apt-get install openjdk-6-jre</li>
-</ul>
-</li>
+<li>Install the recommended JRE</li>
 </ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install openjdk-6-jre</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Grab and Install the Graylog2 Server (0.9.6)</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /opt/graylog2
+</span><span class='line'>    sudo wget https://github.com/downloads/Graylog2/graylog2-server/graylog2-server-0.9.6.tar.gz
+</span><span class='line'>    sudo tar -xvf graylog2-server-0.9.6.tar.gz
+</span><span class='line'>    sudo cp /opt/graylog2/graylog2-server-0.9.6/graylog2.conf.example /etc/graylog2.conf</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Add the Graylog2 user to Mongo</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mongo
+</span><span class='line'>    use graylog2
+</span><span class='line'>    db.addUser("graylog2","password")
+</span><span class='line'>    exit</span></code></pre></td></tr></table></div></figure>
+
+
 
 </div>
 
