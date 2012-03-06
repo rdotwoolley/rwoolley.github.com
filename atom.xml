@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-03-05T22:19:15-07:00</updated>
+  <updated>2012-03-05T22:23:13-07:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -20,8 +20,6 @@
     <id>http://rwoolley.github.com/blog/2012/03/05/zendesk</id>
     <content type="html"><![CDATA[<p><img src="http://siliconangle.com/files/2011/08/zendesk_0.png" alt="Zendesk Logo" /></p>
 
-<h2>Zendesk</h2>
-
 <p>We use Zendesk and I will admit, I&#8217;m a huge fan.  We had the opportunity to retool our support system and a subtle suggestion from @ericchernuka led us to check out Zendesk and what they were cooking.  Of course, if I&#8217;m going to rave about something I&#8217;m going to tell you why, in depth, because that&#8217;s what I do!  So, read on if you want to know about my favorite bits of Zendesk in detail.  As a preview my love for Zendesk is in part due to: SaaS, iOS/Android app, triggers, macros and integration!</p>
 
 <!-- more -->
@@ -29,7 +27,7 @@
 
 <h3>SaaS</h3>
 
-<p>Zendesk is clearly SaaS. You&#8217;re thinking yay, big deal… but it is.  We&#8217;re still operating lean and the ability to ramp up or down on the support side of the business is huge to me.  Add in the fact that we went from nothing to a full on support system in weeks is very nice as well.  Zendesk has a huge strength in that it is designed for support and support only.  The workflow is clean and tight and you can move through supporting a client with product issues quickly.  If you tie in your support KB you&#8217;re even further ahead because you can extent the service you offer and invite your clients into trackable forums.  A broad set of metrics can be used to constantly allow you to refine the support experience and content delivery.</p>
+<p>Zendesk is clearly SaaS. You&#8217;re thinking yay, big deal… but it is.  We&#8217;re still operating lean and the ability to ramp up or down on the support side of the business is huge to me.  Add in the fact that we went from nothing to a full on support system in weeks is very nice as well.  Zendesk has a huge strength in that it is designed for support and support only.  The workflow is clean and tight and you can move through supporting a client with product issues quickly.  If you tie in your support KB you&#8217;re even further ahead because you can extend the service you offer and invite your clients into trackable forums.  A broad set of metrics can be used to constantly allow you to refine the support experience and content delivery.</p>
 
 <h3>Mobile Apps</h3>
 
