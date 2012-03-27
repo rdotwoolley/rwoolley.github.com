@@ -148,27 +148,27 @@
 </span><span class='line'>gpgcheck=0</span></code></pre></td></tr></table></div></figure>
 
 
-<p>You&#8217;ll note that this is not enabled by default.  Keep that in mind.
-* Move your repolist to /etc/yum.repos.d/ so that yum picks it up.  You&#8217;re ready to package this beast up.
-* Make sure FPM is installed, gem install fpm
+<p>You&#8217;ll note that this is not enabled by default.  Keep that in mind.<br/>
+* Move your repolist to /etc/yum.repos.d/ so that yum picks it up.  You&#8217;re ready to package this beast up.<br/>
+* Make sure FPM is installed, gem install fpm<br/>
 * FPM chant to package your repo into a rpm for distribution:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>fpm -s dir -t rpm -n "NameOfPackage" -v &lt;version number> /data/repo/app /etc/yum.repos.d/standalone-app.repo</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Let that chew for a bit, when it&#8217;s done you&#8217;ll have an rpm.  Move that rpm to another machine and install it.
+<p>Let that chew for a bit, when it&#8217;s done you&#8217;ll have an rpm.  Move that rpm to another machine and install it.  <br/>
 * Magic time.  That RPM you just made and installed has moved your repolist file to the /etc/yum.repo.d dir and put all your packages and yum repo files at /data/repo/app.  Try performing a yum install from this local repo:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>yum install app --enablerepo name-of-repo</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Boom. That just happened.  This is a pretty basic usage of FPM but let&#8217;s review what happened:
-1. -s dir: you&#8217;re building an package based on directories and files
-2. -t rpm: the result will be an rpm
-3. -n &#8220;name&#8221;: give your package a name
-4. -v version: give your package a version number
+<p>Boom. That just happened.  This is a pretty basic usage of FPM but let&#8217;s review what happened:<br/>
+1. -s dir: you&#8217;re building an package based on directories and files<br/>
+2. -t rpm: the result will be an rpm<br/>
+3. -n &#8220;name&#8221;: give your package a name<br/>
+4. -v version: give your package a version number<br/>
 5. paths to directories and files, separated by spaces</p>
 
 <p>Note how you didn&#8217;t have to wrap your mind around specfiles or any rpm specific stuff.  I can&#8217;t tell you how huge this is. If you don&#8217;t need to care about the inner workings of rpm specfiles, don&#8217;t, FPM takes care of it.  As I said, this is basic stuff. FPM has the ability to rip multiple package formats including apt, deb and many more. It&#8217;s a huge timesaver and worth taking a look at. Buy @jordansissel a beer if you see him.</p>
