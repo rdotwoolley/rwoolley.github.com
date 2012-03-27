@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>New Flavour of Lifesaver: FPM - rdotwoolley</title>
+  <meta name="author" content="Robert Woolley">
+
+  
+  <meta name="description" content="I&#8217;ve been hunting for a good reason to get familiar with @jordansissel&#8217;s wonderful tool FPM. I have spent more time grovelling with rpm &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rwoolley.github.com/blog/2012/03/26/new-flavour-of-lifesaver-fpm">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="rdotwoolley" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">rdotwoolley</a></h1>
+  
+    <h2>A blog about things.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rwoolley.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">New Flavour of Lifesaver: FPM</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-26T20:31:00-06:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&#8217;ve been hunting for a good reason to get familiar with @jordansissel&#8217;s wonderful tool <a href="https://github.com/jordansissel/fpm">FPM</a>. I have spent more time grovelling with rpm spec files than I ever wanted to but I haven&#8217;t been able to break out of the habit. Until today that is&#8230;</p>
+
+<p>My problem is simple, despite setting up a sweet series of internet accessible yum repos to deploy product some people insist on a standalone installation method. I can&#8217;t deny, this is aggravating as snot. Alas, my problem is simple:</p>
+
+<ol>
+<li><em>How can I get a yum repo deliverable by media?</em></li>
+<li><em>How can I keep the install procedure as similar to those using the publicly available yum repos?</em></li>
+</ol>
+
+
+<p>How to solve this issue using FPM and some cool features of yum:</p>
+
+<!--more-->
+
+
+<ul>
+<li>I&#8217;m assuming you have an accessible yum repository setup the way you want.</li>
+<li>Install the yum download only plugin and/or yum-utils</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum install yum-downloadonly
+</span><span class='line'>yum install yum-utils.noarch</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Now you can access your yum repository but with a twist, you can simply download your package and all the dependencies.  Examples:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum install &lt;package> --download 
+</span><span class='line'>yumdownloader &lt;package> --resolve</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>At this point you have all your rpms, move them to a sensible directory structure. I suggest one that matches how you have your public yum repos setup.  Try /data/repo/app/</li>
+<li>Once your rpms are in /data/repo/app run createrepo on that directory.  At this point you&#8217;ve got a yum repo on disk.  Now it&#8217;s time to create the repolist file, call it standalone-app.repo</li>
+<li>Repolist file:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[name-of-repo]
+</span><span class='line'>name=Descriptive Name for your Repo
+</span><span class='line'>baseurl=file:///data/repo/app
+</span><span class='line'>enabled=0
+</span><span class='line'>gpgcheck=0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You&#8217;ll note that this is not enabled by default.  Keep that in mind.
+* Move your repolist to /etc/yum.repos.d/ so that yum picks it up.  You&#8217;re ready to package this beast up.
+* Make sure FPM is installed, gem install fpm
+* FPM chant to package your repo into a rpm for distribution:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>fpm -s dir -t rpm -n "NameOfPackage" -v &lt;version number> /data/repo/app /etc/yum.repos.d/standalone-app.repo</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let that chew for a bit, when it&#8217;s done you&#8217;ll have an rpm.  Move that rpm to another machine and install it.
+* Magic time.  That RPM you just made and installed has moved your repolist file to the /etc/yum.repo.d dir and put all your packages and yum repo files at /data/repo/app.  Try performing a yum install from this local repo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum install app --enablerepo name-of-repo</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Boom. That just happened.  This is a pretty basic usage of FPM but let&#8217;s review what happened:
+1. -s dir: you&#8217;re building an package based on directories and files
+2. -t rpm: the result will be an rpm
+3. -n &#8220;name&#8221;: give your package a name
+4. -v version: give your package a version number
+5. paths to directories and files, separated by spaces</p>
+
+<p>Note how you didn&#8217;t have to wrap your mind around specfiles or any rpm specific stuff.  I can&#8217;t tell you how huge this is. If you don&#8217;t need to care about the inner workings of rpm specfiles, don&#8217;t, FPM takes care of it.  As I said, this is basic stuff. FPM has the ability to rip multiple package formats including apt, deb and many more. It&#8217;s a huge timesaver and worth taking a look at. Buy @jordansissel a beer if you see him.</p>
+
+<p>Did I solve my problem? Yes
+1. I can put this resultant RPM on a usb key or DVD if desired.
+2. The install method is extremely close to the public yum repos with the exception of the &#8211;enablerepo flag.</p>
+
+<p>/#winning</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Robert Woolley</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-26T20:31:00-06:00" pubdate data-updated="true">Mar 26<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2012/03/26/new-flavour-of-lifesaver-fpm/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2012/03/26/new-flavour-of-lifesaver-fpm/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/05/zendesk/" title="Previous Post: zendesk">&laquo; zendesk</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/03/26/new-flavour-of-lifesaver-fpm/">New Flavour of Lifesaver: FPM</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/05/zendesk/">zendesk</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/05/graylog2-and-dreamy-ocelots/">Graylog2 and Dreamy Ocelots</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/01/logging-as-a-service/">Logging as a Service</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/01/23/postfix/">Postfix</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/rwoolley">@rwoolley</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rwoolley',
+            count: 2,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rdotwoolley", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rdotwoolley" class="twitter-follow-button" data-show-count="false">Follow @rdotwoolley</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Robert Woolley -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
