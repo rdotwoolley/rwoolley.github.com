@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-03-26T21:42:30-06:00</updated>
+  <updated>2012-05-06T20:38:50-06:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -12,6 +12,140 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Barcamp]]></title>
+    <link href="http://rwoolley.github.com/blog/2012/05/05/barcamp/"/>
+    <updated>2012-05-05T19:35:00-06:00</updated>
+    <id>http://rwoolley.github.com/blog/2012/05/05/barcamp</id>
+    <content type="html"><![CDATA[<p>Barcamp was hosted by Startup Calgary today and it was awesome.  Many great talks, chats, and people.  I want to cover some of the high points and with such a jam packed day this post will be a touch longer.  Below is the summary and read on if you can handle the awesome.</p>
+
+<ul>
+<li>Opening speakers</li>
+<li>Mobile development Awesomeness (@johncarpenter)</li>
+<li>Get Cash Money for your LBS startup! (@arpadb)</li>
+<li>Pair Programming (@mmazur)</li>
+<li>Government Money for R&amp;D (@tktechnow and @boastcapital )</li>
+<li>Brand Pyramid (@tktechnow)</li>
+</ul>
+
+
+<!--more-->
+
+
+<h4>Opening Speakers</h4>
+
+<p>Ray Depaul, Tara Kelly, and Shawn Abbott kicked off the day with some high energy and rapid fire speeches to get the attendees wired for the day.  Here were some of the highlights for me:</p>
+
+<h6>Ray Depaul</h6>
+
+<p>Ray hails from RIM (back when they were cool) and now is teaching new waves of entrepreneurs at MRC.  He spoke to us about the <a href="http://www.kickstarter.com/projects/597507018/pebble-e-paper-watch-for-iphone-and-android">Pebble Watch</a> and how disruptive techonolgies require disruptive channels for funding and delivery.</p>
+
+<h6>Tara Kelly</h6>
+
+<p>Tara is an extremely engaging and energetic speaker.  <a href="www.splicesoftware.com">Splice</a> is her gig and she shared three awesome pieces of wisdom:</p>
+
+<ul>
+<li>Know your numbers!  All of them.</li>
+<li>As you grow make sure your role allows you to stay juiced.</li>
+<li>Have your brand pyramid figured out.  If you don&#8217;t punch yourself in the face.</li>
+</ul>
+
+
+<h6>Shawn Abbott</h6>
+
+<p>Shawn Abbott is a big deal and acts as a mentor and guide to many in the YYC startup community.  He shared 5 great points:</p>
+
+<ul>
+<li>Entrepreneurship is a team sport and teams with checked egos and strong chemsitry are more likely to succeed.</li>
+<li>Pull not push.</li>
+<li>Be Agile, know when to fish and when to cut bait.</li>
+<li>Nail it before you scale it.</li>
+<li>The business savvy is as important as the tech savvy.</li>
+</ul>
+
+
+<h4>Sessions</h4>
+
+<p>I attended 5 sessions (there were 6 in total) and I wish I had been able to stick around.  I&#8217;ll cover the high points from each session from my perspective.</p>
+
+<h6>Mobile Development Awesomeness with John Carpenter</h6>
+
+<p><a href="http://twitter.com/johncarpenter">@johncarpenter</a> put on a great session. He&#8217;s got a great ability to respond to the group in the non-conference style.  I believe John is focused on mobile gaming but his thoughts apply to all aspects of mobile development IMHO.  If you&#8217;re in Calgary you should check out his <a href="http://startupcalgary.ca/2012/03/introducing-startup-calgarys-mobile-monday/">Mobile Monday</a> meetups.  Full disclosure: I&#8217;m not a developer but I&#8217;m interested. Here&#8217;s what I took from his session:</p>
+
+<ul>
+<li>Minimum Viable Product: get there ASAP. (so glad I read lean startup before attending).</li>
+<li>Your process need only be Build - Measure - Learn.  Do this as fast as possible.</li>
+<li>Bring customers into your cycle ASAP.</li>
+<li>Building the App is easy, pushing the app is hard.</li>
+<li>Mobile is about experience, not widgets. How does your product help the mobile phone users pass the time?</li>
+<li>All areas of the business, Sales, Dev, Ops, QA etc should be on the same Build - Measure - Learn cycle.  If not, it messes thing up.  You&#8217;re only as fast as your slowest team.</li>
+<li>Know your community! Otherwise you cannot know your metrics and you cannot measure or learn.  He shared a great anecdote about the Trapster app, ask him about it sometime.</li>
+<li>Application Feedback: John mentioned &#8216;Net Promoter Scores&#8217; as a valuable approach.</li>
+<li>Flurry is a great tool for in app metrics.</li>
+<li>Test Flight allows split testing easily.</li>
+</ul>
+
+
+<h6>How to Raise 500K for your LBS Startup</h6>
+
+<p>This session was run by Arpad Barabas <a href="http://www.twitter.com/arpadb">@arpadb</a> and was focused on getting some sweet funding for innovation based on geomatics work.  Arpad is awesome, he&#8217;s super calm and engaging with this quiet intensity that powers a crowd.  Not to mention he&#8217;s a snappy dresser!  He&#8217;s a part of Startup Calgary and is integral to <a href="http://aboveborder.com/">Above Border</a> and was a key guy at <a href="http://www.tecterra.com/">Tecterra</a> so a great deal of his advice is exceptional.</p>
+
+<ul>
+<li>Know your customer acquisition costs! How much does it cost you to get that first customer? How much do you make from that customer?</li>
+<li>If you want to approach tecterra for funding, you can reach out to Arpad for advice.</li>
+<li>If there is any mapping or location based service element in your product or project, check out tecterra.</li>
+<li>Tecterra funding is wildly friendly, non-diluting, sweet repayment terms and several programs that are very useful.</li>
+</ul>
+
+
+<h6>Pair Programming</h6>
+
+<p>Pair programming was hosted by Mike Mazur <a href="http://twitter.com/mmazur">@mmazur</a> who&#8217;s currently based in Singapore and working for New Context (Formerly Pivotal Labs&#8217; Singapore office) and back in town for a visit.  Mike and I went through engineering together so it was great to see him and attend his presentation.  Here&#8217;s my thoughts on his session:</p>
+
+<ul>
+<li>Pairing has positives for learning and sharing information within teams</li>
+<li>Pairing can increase quality</li>
+<li>Pairing does not cost the organization more! Because there are less mistakes and more shared context development can move faster.</li>
+<li>Pair on everything! Ops, Dev, QA, UI etc.</li>
+<li>For pairing to work, conistent tooling is required.  No custom key bindings, you all use the same tools.</li>
+<li>Typing speed is not the rate limiting factor of a dev team using pair programming.</li>
+<li>Pairing requires a few things of people: focus, respect of personal space, good communication, and an open mind.  If you don&#8217;t have those things, you&#8217;re toast.</li>
+<li>The concept of &#8216;the truck number&#8217; came up.  This is the number of people that would have to be killed by a truck for your organization to come to a halt.  Pairing will help dramatically increase this number.</li>
+</ul>
+
+
+<h6>Government Funding for R&amp;D</h6>
+
+<p>This session was jointly hosted by Tara Kelly and <a href="https://twitter.com/#!/boastcapital">Alex Popa</a>.  Alex was the main contributor to the conversation and he&#8217;s awesome.  Having been the lucky survivor of numerous ISO and FDA audits I would love to see Alex in action. He&#8217;s insanely calm with smooth dulcet tones that would likely calm any auditor or reassessment team.  His cool confidence was fun to be around especially when Ivan Sierralta from Innovate Calgary started contributing to the session. Ivan is super energetic and hilarious so the contrast was fun.  Here&#8217;s my main take aways:</p>
+
+<ul>
+<li>SRED is the most lucrative program to take advantage of.  As long as you can run for a year and meet the technology requirements (must use technology, must have some uncertainty, and must demonstrate advancement) it&#8217;s worth the accounting pain.  That being said, talk to a SRED consultant (like Alex) and they can give you some good ideas.</li>
+<li>IRAP seemed to be more lucrative and popular (especially with Ivan) because the funding can be upfront and is generally easier to secure.  Main thing here is to get into the queue for this funding and stick with it. Once you get it the first time it becomes easier.</li>
+<li>Tara suggested that you must write your own grants so that your voice is present in the document.  Failure to do this will hurt your chances.</li>
+<li>Alberta Innovates Tech Futures is another great source of funding as well.</li>
+<li>Lastly, a great idea came out of the session: a timeline based infographic that points out which funding you should go after and when during the life of your company.  The main example here is CIP funding is only good for your first customer.  Got a customer already? Don&#8217;t waste your time with CIP.</li>
+</ul>
+
+
+<h6>Brand Pyramid</h6>
+
+<p>The best session for me was the brand pyramid with <a href="http://twitter.com/tktechnow">Tara Kelly</a> who&#8217;s the President and CEO of <a href="http://splicewsoftware.com">Splice</a> and a truly awesome person to hear talk.  Her energy and passion are contagious and her presentation style resonates with me (and those of you that know me know what that means).  Holy shit, I learned so much about the things I struggle with daily that I got a headache.  So, strap in people, this is getting real:</p>
+
+<ul>
+<li>Your business should answer this question: What 5 things do you want your customers to say about your organization?</li>
+<li>Who are you currently selling to?  Who do you want to be selling to?</li>
+<li>Your personal brand does NOT equal the organizations&#8217; brand.  They compliment each other!</li>
+<li>The TED talk by <a href="http://www.youtube.com/watch?v=u4ZoJKF_VuA">Simon Sidek</a> was mentioned.</li>
+<li>Knowing the Why, the What and the How allows you to avoid bad money, align your people and empower your people to make good decisions without heavy oversight. (Note: if you have decision bottlenecks in your org I bet you a fancy dinner it&#8217;s directly related to a crappy brand pyramid)</li>
+<li>Who would your organization sponsor if they could sponsor any team, any sport, anything?</li>
+<li>Use your head, trust your heard, follow your gut.</li>
+</ul>
+
+
+<p>I cannot stress enough how these elements define the culture of your team and organization.  They are the fundamental base of all things.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New Flavour of Lifesaver: FPM]]></title>
