@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-07-17T21:53:27-06:00</updated>
+  <updated>2012-07-22T16:08:41-06:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Update and a Fresh Start]]></title>
+    <link href="http://rwoolley.github.com/blog/2012/07/22/update-and-a-fresh-start/"/>
+    <updated>2012-07-22T15:18:00-06:00</updated>
+    <id>http://rwoolley.github.com/blog/2012/07/22/update-and-a-fresh-start</id>
+    <content type="html"><![CDATA[<p>I have been horrible on posting regularly. There&#8217;s never a good excuse so I&#8217;ll skip that part and move into the updates!</p>
+
+<!-- more -->
+
+
+<h2>Update</h2>
+
+<p>I am sad to mention that I have left my work home of the past 4 years (Calgary Scientific).  There are many great people, a neat product, and (of course) my team that I bid farewell.  It was not an easy decision but the experience I gained was incalculable.  I have a huge backlog of blog posts to share about what we got up over the past few years.</p>
+
+<h4><em>note</em>: The Team aka My Team</h4>
+
+<p>I understand that it can be percieved as arrogant to refer to the people you manage the way that I do.  My perspective does not come from a place of ego when I say &#8216;my team&#8217;.  At CSI the team I built (yes, I recruited each of them) and lead (I was priviledged to set objectives and direction) will always be very special to me and I learned so much from them that I am very eager to share it.  I am extremely proud of that group and what they have done and will continue to do.  So when I say &#8216;my team&#8217; I&#8217;m refering to a collection of people that I would work with in any capacity again in an instant.  This theme will come up repeatedly so heads up.</p>
+
+<h2>Fresh Start</h2>
+
+<p>I am happy to say that I have joined <a href="http://solium.com">Solium Capital Inc</a> as their first DevOps engineer.  It&#8217;s going to be very exciting to bring my culture, automation, measurement and information sharing perspectives to their teams.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Barcamp]]></title>
@@ -101,19 +125,15 @@
 
 <h6>Pair Programming</h6>
 
-<p>Pair programming was hosted by Mike Mazur <a href="http://twitter.com/mmazur">@mmazur</a> who&#8217;s currently based in Singapore and working for New Context (Formerly Pivotal Labs&#8217; Singapore office) and back in town for a visit.  Mike and I went through engineering together so it was great to see him and attend his presentation.  Here&#8217;s my thoughts on his session:</p>
-
-<ul>
-<li>Pairing has positives for learning and sharing information within teams</li>
-<li>Pairing can increase quality</li>
-<li>Pairing does not cost the organization more! Because there are less mistakes and more shared context development can move faster.</li>
-<li>Pair on everything! Ops, Dev, QA, UI etc.</li>
-<li>For pairing to work, conistent tooling is required.  No custom key bindings, you all use the same tools.</li>
-<li>Typing speed is not the rate limiting factor of a dev team using pair programming.</li>
-<li>Pairing requires a few things of people: focus, respect of personal space, good communication, and an open mind.  If you don&#8217;t have those things, you&#8217;re toast.</li>
-<li>The concept of &#8216;the truck number&#8217; came up.  This is the number of people that would have to be killed by a truck for your organization to come to a halt.  Pairing will help dramatically increase this number.</li>
-</ul>
-
+<p>Pair programming was hosted by Mike Mazur <a href="http://twitter.com/mmazur">@mmazur</a> who&#8217;s currently based in Singapore and working for New Context (Formerly Pivotal Labs&#8217; Singapore office) and back in town for a visit.  Mike and I went through engineering together so it was great to see him and attend his presentation.  Here&#8217;s my thoughts on his session:<br/>
+* Pairing has positives for learning and sharing information within teams
+* Pairing can increase quality
+* Pairing does not cost the organization more! Because there are less mistakes and more shared context development can move faster.
+* Pair on everything! Ops, Dev, QA, UI etc.
+* For pairing to work, conistent tooling is required.  No custom key bindings, you all use the same tools.
+* Typing speed is not the rate limiting factor of a dev team using pair programming.
+* Pairing requires a few things of people: focus, respect of personal space, good communication, and an open mind.  If you don&#8217;t have those things, you&#8217;re toast.
+* The concept of &#8216;the truck number&#8217; came up.  This is the number of people that would have to be killed by a truck for your organization to come to a halt.  Pairing will help dramatically increase this number.</p>
 
 <h6>Government Funding for R&amp;D</h6>
 

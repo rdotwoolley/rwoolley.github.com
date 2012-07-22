@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Logging as a Service - rdotwoolley</title>
+  <title>Update and a Fresh Start - rdotwoolley</title>
   <meta name="author" content="Robert Woolley">
 
   
-  <meta name="description" content="I&#8217;ve been running into a logging challenge at work of late. The usual issue.
-Lots of logs, in lots of places, retention policies, governance &hellip;">
+  <meta name="description" content="I have been horrible on posting regularly. There&#8217;s never a good excuse so I&#8217;ll skip that part and move into the updates! Update I am sad &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Lots of logs, in lots of places, retention policies, governance &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rwoolley.github.com/blog/2012/02/01/logging-as-a-service">
+  <link rel="canonical" href="http://rwoolley.github.com/blog/2012/07/22/update-and-a-fresh-start">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -69,7 +68,7 @@ Lots of logs, in lots of places, retention policies, governance &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Logging as a Service</h1>
+      <h1 class="entry-title">Update and a Fresh Start</h1>
     
     
       <p class="meta">
@@ -85,46 +84,29 @@ Lots of logs, in lots of places, retention policies, governance &hellip;">
   
 
 
-<time datetime="2012-02-01T20:23:00-07:00" pubdate data-updated="true">Feb 1<span>st</span>, 2012</time>
+<time datetime="2012-07-22T15:18:00-06:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I&#8217;ve been running into a logging challenge at work of late.  The usual issue.
-Lots of logs, in lots of places, retention policies, governance issues,
-reporting and (in my humble opinion the most important) support/debugging.  After some searching I
-found logg.ly and Papertrail which offered what I wanted as a service.  Very
-sweet.  Unfortunately I cannot use them in this implementation so I am pursuing
-Graylog2 and logstash (another blogpost on that later). Right now I&#8217;m plugging
-Papertrail into our demo system to see how it goes and how it fits with our
-workflow.  I just wanted to cover off some first impressions with Papertrail.</p>
+<div class="entry-content"><p>I have been horrible on posting regularly. There&#8217;s never a good excuse so I&#8217;ll skip that part and move into the updates!</p>
 
-<!--more-->
+<!-- more -->
 
 
-<ol>
-<li><p>Compatability
-We&#8217;re running RHEL 5.5 (don&#8217;t judge) so we&#8217;re using syslog. Luckily there is a
-little gem from the Papertrail folks that allows you to pipe your app logs into
-their service.  remote_syslog works very well!
-Ruby 1.8.7 is our ruby of choice for production systems.  We don&#8217;t put RVM on
-production boxes so our setup is simple in that regard.</p></li>
-<li><p>Ease of Use
-I love how I can see a window into all the events flying by. This sounds
-ridiculous but I can see issues just by watching patterns in the logs. It&#8217;s
-like using the force but it works for me.  Of course you can adjust the
-granularity to a specific system.  Search is the next best thing.  90% of my
-time spent grovelling in app logs is due to an issue.  Papertrail allows you to
-quickly match the user-time-wtf was going on tuple.  Better yet, you can save
-any search and run it later. Helpful when you want to see if a fix worked.</p></li>
-</ol>
+<h2>Update</h2>
 
+<p>I am sad to mention that I have left my work home of the past 4 years (Calgary Scientific).  There are many great people, a neat product, and (of course) my team that I bid farewell.  It was not an easy decision but the experience I gained was incalculable.  I have a huge backlog of blog posts to share about what we got up over the past few years.</p>
 
-<p>First impressions are great at this point. I think Papertrail has legs.  The
-next phase of my thoughts will be around retention and compliance with acts
-like HIPAA.</p>
+<h4><em>note</em>: The Team aka My Team</h4>
+
+<p>I understand that it can be percieved as arrogant to refer to the people you manage the way that I do.  My perspective does not come from a place of ego when I say &#8216;my team&#8217;.  At CSI the team I built (yes, I recruited each of them) and lead (I was priviledged to set objectives and direction) will always be very special to me and I learned so much from them that I am very eager to share it.  I am extremely proud of that group and what they have done and will continue to do.  So when I say &#8216;my team&#8217; I&#8217;m refering to a collection of people that I would work with in any capacity again in an instant.  This theme will come up repeatedly so heads up.</p>
+
+<h2>Fresh Start</h2>
+
+<p>I am happy to say that I have joined <a href="http://solium.com">Solium Capital Inc</a> as their first DevOps engineer.  It&#8217;s going to be very exciting to bring my culture, automation, measurement and information sharing perspectives to their teams.</p>
 </div>
 
 
@@ -147,21 +129,15 @@ like HIPAA.</p>
   
 
 
-<time datetime="2012-02-01T20:23:00-07:00" pubdate data-updated="true">Feb 1<span>st</span>, 2012</time>
+<time datetime="2012-07-22T15:18:00-06:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/logging-monitoring/'>logging,monitoring</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2012/02/01/logging-as-a-service/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2012/02/01/logging-as-a-service/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2012/07/22/update-and-a-fresh-start/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2012/07/22/update-and-a-fresh-start/" >Tweet</a>
   
   
   
@@ -170,10 +146,8 @@ like HIPAA.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/01/23/postfix/" title="Previous Post: Postfix">&laquo; Postfix</a>
+        <a class="basic-alignment left" href="/blog/2012/05/05/barcamp/" title="Previous Post: Barcamp">&laquo; Barcamp</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/02/05/graylog2-and-dreamy-ocelots/" title="next Post: Graylog2 and Dreamy Ocelots">Graylog2 and Dreamy Ocelots &raquo;</a>
       
     </p>
   </footer>
