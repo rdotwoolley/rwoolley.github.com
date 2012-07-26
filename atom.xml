@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-07-22T16:08:41-06:00</updated>
+  <updated>2012-07-25T20:22:20-06:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why My Team Exists*]]></title>
+    <link href="http://rwoolley.github.com/blog/2012/07/25/why-my-team-exists/"/>
+    <updated>2012-07-25T19:01:00-06:00</updated>
+    <id>http://rwoolley.github.com/blog/2012/07/25/why-my-team-exists</id>
+    <content type="html"><![CDATA[<p>*This is a posthumous post that I meant to get out before my tenure ended with my former team.  Still, it&#8217;s an important post because it highlights some of the extremely powerful elements of culture that a strong team can harness and share.  As ever, click through if you&#8217;re interested.</p>
+
+<!-- more -->
+
+
+<p>Why.  As <a href="http://www.ted.com/talks/view/lang/en//id/848">Simon Sinek</a> would say, it is <em>the question</em>. Unfortunately it is a question that many organizations struggle with. I don&#8217;t think the struggle is bad it&#8217;s more when the struggle stops. Here&#8217;s how my team and I approached that cultural challenge.</p>
+
+<p>After attending Barcamp I was inspired by Tara Kelly and I decided to put a challenge to the team. On the Monday following Barcamp I posed the question to the team during standup, &#8220;Why Does the Ops team Exist?&#8221;  Over the next few weeks the team debated (largely without my input) and completely blew my mind with the result.  Not only did they create a great why, they presented it and posted it above our Kanban board for all to see.  Check it out below:</p>
+
+<p><img src="https://s3.amazonaws.com/rdot-personal/blog/WhyOps.png" title="Why Ops Exists at CSI" alt="picture alt" /></p>
+
+<p>Here&#8217;s some of the reasons why the CSI Ops team totally rocks:</p>
+
+<ul>
+<li>They formatted the text as Ruby to match our internal goal to move all our scripts to Ruby</li>
+<li>The &#8216;Why&#8217; reflects how a good ops team services internal and external customers and does so fearlessly</li>
+<li>The message has subtle elements that I think are crucial to an Ops team building positive culture. Note the words: &#8216;Empower, practices, postive, technology&#8217;</li>
+<li>Whenever the team has a question or a dilemma they can always chart a course of action that is based from our reason for being. If your actions or response will lead to a positve and empowering customer experience based on your skills and/or the use of technology <em>rip it!</em></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Update and a Fresh Start]]></title>
