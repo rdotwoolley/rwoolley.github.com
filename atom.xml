@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-08-01T19:58:24-06:00</updated>
+  <updated>2012-08-01T20:44:36-06:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ops and a New Series of Posts]]></title>
+    <link href="http://rwoolley.github.com/blog/2012/08/01/ops-and-a-new-series-of-posts/"/>
+    <updated>2012-08-01T19:46:00-06:00</updated>
+    <id>http://rwoolley.github.com/blog/2012/08/01/ops-and-a-new-series-of-posts</id>
+    <content type="html"><![CDATA[<p>In proper Ops fashion I have finally setup comments and analytics on the blog! I&#8217;m measuring everything so it should be entertaining.  Comments should be entertaining. I&#8217;m not interested moderataing so be warned and review this <a href="http://popblerd.com/wp-content/uploads/2011/10/dickwad-theory.jpg">handy chart.</a>  In other news I wanted to cover three things with this post: what is Ops to me, the DevOps Calgary meetup, and a new series of posts about position on people in systems.  As ever, click through if interested.</p>
+
+<!-- more -->
+
+
+<h3>What is Ops? Baby don&#8217;t hurt me, no more</h3>
+
+<p>I have been a part of teams that do Ops work my entire career.  The kind of people drawn to Ops are a speical breed blending tenacity, fearlessness, and an ability to suffer.  Still, I struggle to define what Ops is.  This tweet has helped me:</p>
+
+<blockquote><p>Ops: a problem everyone wishes someone else would solve.</p><footer><strong>@fogus</strong> <cite><a href='https://twitter.com/fogus/statuses/126439059622072320'>twitter.com/fogus/statuses/&hellip;</a></cite></footer></blockquote>
+
+
+<p>While it is dangerous to define things this way (ex: defining trust as the pre-existing condition for betrayal) it&#8217;s oddly fitting.  Ops teams exist because they must, because some people will do the things that need to be done regardless of stature and because some people just love making sure things are working.  Ops is the team that likes to make things go and go better, they like making sure the other teams are rolling and they are powerful forces for positive culture contributing positive energy in their roles.  This is amplified when they find themselves in cross functional roles.</p>
+
+<p>Of course, I speak of the idealized case.  But isn&#8217;t that what we all strive for?</p>
+
+<h3>DevOps Calgary Meetup</h3>
+
+<p>We had our first meetup last week and it was a nice start to get things rolling again.  The group was energetic and full of great ideas.  I&#8217;m looking forward to the potential and if you&#8217;re interested <a href="http://www.meetup.com/CalgaryDevOps/">check it out</a></p>
+
+<h3>People are the System</h3>
+
+<p>I&#8217;m working on a series, my first ever, of posts that have a common theme: people.  I have a strong set of theories about systems and the people that design, implement, run and maintain them.  I feel that we often undervalue the role of people and I seek to draw attention to this and offer my suggestions and experience in tuning the most critical part of any system: the people.  Watch for it!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why My Team Exists*]]></title>
