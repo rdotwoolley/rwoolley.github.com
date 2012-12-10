@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-12-02T19:38:02-07:00</updated>
+  <updated>2012-12-09T21:31:55-07:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Jeet_Kune_DevOps]]></title>
+    <link href="http://rwoolley.github.com/blog/2012/12/09/jeet-kune-devops/"/>
+    <updated>2012-12-09T21:04:00-07:00</updated>
+    <id>http://rwoolley.github.com/blog/2012/12/09/jeet-kune-devops</id>
+    <content type="html"><![CDATA[<p>When I am trying to build a bridge between Dev, Ops, QA, and a business unit I find that I reference Bruce Lee a great deal.  Not only was Bruce Lee a superb actor and amazing martial artist he was a great philopsher.  Click through to read about Jeet Kune DevOps!</p>
+
+<!-- more -->
+
+
+<blockquote><p>&#8220;Use only that which works, and take it from any place you can find it.&#8221;<br/>
+[As quoted in Bruce Lee : Fighting Spirit (1994) by Bruce Thomas (1994), p.44]</p></blockquote>
+
+<p>There is a consistent effort to label or define DevOps. This is a worthwhile and important effort.  Defining  a consistent vocabulary allows the flow of communication between different groups more readily.  This aids sharing, the ability to measure, common culture elements etc.  What we do is global and our communication capability has to reflect that.</p>
+
+<p>Let me step back for a moment.  I am student of agile and I have worked in agile environments for many years.  I believe the agile movement made a subtle mistake in that there was (and is) too much effort spent defining the various methodologies and, for lack of a better term, enforcing those methodologies.  Teams that adopted these methodologies pragmatically and adapted them to their business won.  Those that tried to cling strictly to Scrum, XP or Kanban etc, found themselves constantly in a struggle to implement those methodologies instead of making things work.  The number of times I heard the sentence, &#8220;We can&#8217;t do that it&#8217;s not scrum/agile/XP&#8221; from various teams is too high.  Note, I was a willing perpetrator in this behaviour and this antipattern isn&#8217;t limited to tech (uhhh, project management?).  Thing is, I do not want to make the same mistake twice.</p>
+
+<p>At times I think the DevOps movement teeters on a making a similar misstep.  By pursuing too narrow of a definition for DevOps we could lose momentum.  A common mode of communication is necessary but it lacks credibility and solidarity if we tear each other to bits over the perceived implementation of a flawed process, tool, or system.  We have some examples of this in our young past, (NoOps anyone?) and what is the point of wasting energy on that type of discourse?</p>
+
+<p>@jordansissel really helped shape my early perspectives on DevOps when I heard one of his first interviews.  When he was asked about Devops he said (paraphrasing here) &#8220;I guess you can call that devops, I don&#8217;t.  I call it doing the right thing&#8221;.  Isn&#8217;t that what we&#8217;re all after?  Our common mode should be based on sharing, measurement, culture, tools and doing the right thing. Wait, does that sound familiar?  It should because <a href="http://itrevolution.com/devops-culture-part-1/">I STOLE IT from Damon Edwards and John Willis</a>.  Or I took it, adapted it and added to it.  So, what am I getting at?  Simple, I ask the DevOps moment to do one thing: Use what works, take it from anywhere, share what you have learned and, above all else, keep doing what is right.</p>
+
+<p><img src="https://s3.amazonaws.com/rdot-personal/blog/Absorb-what-is-useful-Discard-what-is-not-Add-what-is-uniquely-your-own-quote-by-Bruce-Lee.jpeg" alt="BruceLee" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cooperation]]></title>
