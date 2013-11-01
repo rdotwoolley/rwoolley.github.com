@@ -4,7 +4,7 @@
   <title><![CDATA[rdotwoolley]]></title>
   <link href="http://rwoolley.github.com/atom.xml" rel="self"/>
   <link href="http://rwoolley.github.com/"/>
-  <updated>2012-12-09T21:33:50-07:00</updated>
+  <updated>2013-10-31T20:09:19-06:00</updated>
   <id>http://rwoolley.github.com/</id>
   <author>
     <name><![CDATA[Robert Woolley]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Failure Hurts]]></title>
+    <link href="http://rwoolley.github.com/blog/2013/10/31/not-minding/"/>
+    <updated>2013-10-31T21:31:00-06:00</updated>
+    <id>http://rwoolley.github.com/blog/2013/10/31/not-minding</id>
+    <content type="html"><![CDATA[<p><img src="https://s3.amazonaws.com/rdot-personal/blog/notMinding.jpg" alt="The trick is not minding that it hurts" /></p>
+
+<blockquote><p>The trick, William Potter, is not minding that it hurts.</p><footer><strong>T.E. Lawrence and David8</strong> <cite>Lawrence of Arabia and Prometheus</cite></footer></blockquote>
+
+
+<p>As the Internet, technology and consumers collide we often hear, &#8216;What are you going to do to ensure this <em>never happens again.</em>&#8217; For awhile, this really bothered me and it was simple to get me from my zenlike calm to ultra rage with that sentence. While I am sure we all endevaour for failure to not occur, it does. Thermodynamics tell us that closed systems alway seek a state of maximum entropy and so it goes in Web Operations.  This is why our entire existence is formed around MTTR.  One day, in my state of annoyance with my inability to project certainty, I came across this tweet from Mark Burgess:</p>
+
+<blockquote><p>The trick is to create meaning from failure.</p><footer><strong>@markburgess_osl</strong> <cite><a href='https://twitter.com/markburgess_osl/status/272680024912560128'>twitter.com/markburgess_osl/&hellip;</a></cite></footer></blockquote>
+
+
+<p>I was missing the point. All along, I thought there was nothing meaningful in failure (and no one needs nothing) but as it turns out, there is a great deal of meaning if you can get past the hurt.  Here&#8217;s the pattern I employ:</p>
+
+<h3>Assumptions</h3>
+
+<ol>
+<li>There is some type of metrics collection in use so you can measure response to inputs</li>
+<li>There is a willingness to employ a continuous improvement loop</li>
+</ol>
+
+
+<h3>The &#8216;Lawrence of Arabia&#8217; Pattern</h3>
+
+<h4>blameless post mortem</h4>
+
+<p>You need to understand what happened and why it hurts.  It&#8217;s not enough to say the internet is hard and move on. As much as possible, quantify your pain.  Can you reduce an outage to dollars per minute?  Can you measure the impact on your brand reputation?  To get meaing from failure you simply must know what impact the failure has.  Here are some examples of how to enact the blameless postmrotem:</p>
+
+<ul>
+<li><a href="http://codeascraft.com/2012/05/22/blameless-postmortems/">Etsy&#8217;s Postmortem Culture</a></li>
+<li><a href="http://aphyr.com/posts/288-the-network-is-reliable">Beatiful Collection of Postmortems from Aphyr</a></li>
+</ul>
+
+
+<h4>one human correction</h4>
+
+<p>Once you have a bead on the pain the next step is to enact your continuous improvement loop.  With my team we always set the intention that we will make (at least) one human behaviour based improvement in the wake of an outage event.  We don&#8217;t mind that it hurt. We do want to make sure that the pain we feel next time is new and different.  Some exercises we enact to identify that human based improvement:</p>
+
+<ul>
+<li>What business assumptions have changed?</li>
+<li>What technology assumptions have changed?</li>
+<li>What could we do to make it easier to do the right thing?</li>
+</ul>
+
+
+<h5>example</h5>
+
+<p>Once upon a time we suffered pain from hysterical stop the world GC events.  The human improvement was to find a way to post to a dashboard when these hysterical GCs were occuring so that, as the operator, we could quickly see that it was a GC loop and act accordingly.  A little graphite and a small daemon go a long way to minimizing MTTR.</p>
+
+<h4>one technology correction</h4>
+
+<p>Everything changes and changes fast.  What assumptions have you made about your technology collection in your complex system?  Are the queues queuing well? Is the JVM tuned for the way people use your system?  Can you do anything to catch this and make the feedback loop shorter?  I encourage the introspection so that one improvement is made on the technology side.</p>
+
+<h5>example</h5>
+
+<p>Let&#8217;s stay on the GC example for fun.  After torpedoing the heap the obvious tuning paramter is to merely add more.  Indeed, that was our first approach to buy some time. Our introspection kicked in and we realized that our user base had grown and their habits had evolved.  We then decided to look at a different JVM that would match more closely to how people used our software.</p>
+
+<h4>conclusion</h4>
+
+<p>If you were to take one thing away from this pattern I hope that it is the inspiration to find meaning in failure.  Like Lawrence of Arabia, there is beauty in the desert of failure and it you can withstand the pain it&#8217;s a wonderful way to improve what you do.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Jeet Kune DevOps]]></title>
@@ -44,9 +110,6 @@
     <updated>2012-10-28T16:22:00-06:00</updated>
     <id>http://rwoolley.github.com/blog/2012/10/28/cooperation-v1</id>
     <content type="html"><![CDATA[<p>Welcome to my first post in the series regarding people and how they are the most important part of the system. I have decided to tackle cooperation so here are my thoughts (and thoughts from others) on how cooperation trumps competition.  Be warned, this is a lengthy topic and this is only my initial essay on the matter.  Expect more. Much more. As ever, click on for a good read.</p>
-
-<!-- more -->
-
 
 <h2>Why are you reading this?</h2>
 

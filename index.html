@@ -9,7 +9,7 @@
   <meta name="author" content="Robert Woolley">
 
   
-  <meta name="description" content="When I am trying to build a bridge between Dev, Ops, QA, and a business unit I find that I reference Bruce Lee a great deal. Not only was Bruce Lee a &hellip;">
+  <meta name="description" content="The trick, William Potter, is not minding that it hurts.T.E. Lawrence and David8 Lawrence of Arabia and Prometheus As the Internet, technology and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,101 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/31/not-minding/">Failure Hurts</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-31T21:31:00-06:00" pubdate data-updated="true">Oct 31<span>st</span>, 2013</time>
+        
+         | <a href="/blog/2013/10/31/not-minding/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="https://s3.amazonaws.com/rdot-personal/blog/notMinding.jpg" alt="The trick is not minding that it hurts" /></p>
+
+<blockquote><p>The trick, William Potter, is not minding that it hurts.</p><footer><strong>T.E. Lawrence and David8</strong> <cite>Lawrence of Arabia and Prometheus</cite></footer></blockquote>
+
+
+<p>As the Internet, technology and consumers collide we often hear, &#8216;What are you going to do to ensure this <em>never happens again.</em>&#8217; For awhile, this really bothered me and it was simple to get me from my zenlike calm to ultra rage with that sentence. While I am sure we all endevaour for failure to not occur, it does. Thermodynamics tell us that closed systems alway seek a state of maximum entropy and so it goes in Web Operations.  This is why our entire existence is formed around MTTR.  One day, in my state of annoyance with my inability to project certainty, I came across this tweet from Mark Burgess:</p>
+
+<blockquote><p>The trick is to create meaning from failure.</p><footer><strong>@markburgess_osl</strong> <cite><a href='https://twitter.com/markburgess_osl/status/272680024912560128'>twitter.com/markburgess_osl/&hellip;</a></cite></footer></blockquote>
+
+
+<p>I was missing the point. All along, I thought there was nothing meaningful in failure (and no one needs nothing) but as it turns out, there is a great deal of meaning if you can get past the hurt.  Here&#8217;s the pattern I employ:</p>
+
+<h3>Assumptions</h3>
+
+<ol>
+<li>There is some type of metrics collection in use so you can measure response to inputs</li>
+<li>There is a willingness to employ a continuous improvement loop</li>
+</ol>
+
+
+<h3>The &#8216;Lawrence of Arabia&#8217; Pattern</h3>
+
+<h4>blameless post mortem</h4>
+
+<p>You need to understand what happened and why it hurts.  It&#8217;s not enough to say the internet is hard and move on. As much as possible, quantify your pain.  Can you reduce an outage to dollars per minute?  Can you measure the impact on your brand reputation?  To get meaing from failure you simply must know what impact the failure has.  Here are some examples of how to enact the blameless postmrotem:</p>
+
+<ul>
+<li><a href="http://codeascraft.com/2012/05/22/blameless-postmortems/">Etsy&#8217;s Postmortem Culture</a></li>
+<li><a href="http://aphyr.com/posts/288-the-network-is-reliable">Beatiful Collection of Postmortems from Aphyr</a></li>
+</ul>
+
+
+<h4>one human correction</h4>
+
+<p>Once you have a bead on the pain the next step is to enact your continuous improvement loop.  With my team we always set the intention that we will make (at least) one human behaviour based improvement in the wake of an outage event.  We don&#8217;t mind that it hurt. We do want to make sure that the pain we feel next time is new and different.  Some exercises we enact to identify that human based improvement:</p>
+
+<ul>
+<li>What business assumptions have changed?</li>
+<li>What technology assumptions have changed?</li>
+<li>What could we do to make it easier to do the right thing?</li>
+</ul>
+
+
+<h5>example</h5>
+
+<p>Once upon a time we suffered pain from hysterical stop the world GC events.  The human improvement was to find a way to post to a dashboard when these hysterical GCs were occuring so that, as the operator, we could quickly see that it was a GC loop and act accordingly.  A little graphite and a small daemon go a long way to minimizing MTTR.</p>
+
+<h4>one technology correction</h4>
+
+<p>Everything changes and changes fast.  What assumptions have you made about your technology collection in your complex system?  Are the queues queuing well? Is the JVM tuned for the way people use your system?  Can you do anything to catch this and make the feedback loop shorter?  I encourage the introspection so that one improvement is made on the technology side.</p>
+
+<h5>example</h5>
+
+<p>Let&#8217;s stay on the GC example for fun.  After torpedoing the heap the obvious tuning paramter is to merely add more.  Indeed, that was our first approach to buy some time. Our introspection kicked in and we realized that our user base had grown and their habits had evolved.  We then decided to look at a different JVM that would match more closely to how people used our software.</p>
+
+<h4>conclusion</h4>
+
+<p>If you were to take one thing away from this pattern I hope that it is the inspiration to find meaning in failure.  Like Lawrence of Arabia, there is beauty in the desert of failure and it you can withstand the pain it&#8217;s a wonderful way to improve what you do.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -153,12 +248,125 @@
 
   <div class="entry-content"><p>Welcome to my first post in the series regarding people and how they are the most important part of the system. I have decided to tackle cooperation so here are my thoughts (and thoughts from others) on how cooperation trumps competition.  Be warned, this is a lengthy topic and this is only my initial essay on the matter.  Expect more. Much more. As ever, click on for a good read.</p>
 
+<h2>Why are you reading this?</h2>
+
+<p><img src="http://cloud-2.steampowered.com/ugc/541804448690540485/0E95C956284E83140D6497E220025BCF28120990/200x200.resizedimage" title="Why" alt="why?" /><br/>
+Chances are that you:</p>
+
+<ul>
+<li>Keep a corner of the Internet running or some critical piece of information technology operating inspite of itself</li>
+<li>You walk a fine line between innovation and stability</li>
+<li>You might have this restless feeling that things can be done better</li>
+</ul>
+
+
+<p>If so, welcome to the club.  Before we begin to get incredibly deep into the details here are a few things that won&#8217;t be happening in this post:</p>
+
+<ul>
+<li>There will be no defining of DevOps.  There are people way better than me figuring that out</li>
+<li>There will be less focus on tools, again, way better people out there for that</li>
+<li>This will be focused on soft things like people, feelings, culture, behaviour hacks and how we focus on doing things better</li>
+</ul>
+
+
+<p>My goal with the post is to leave you with the feeling that cooperation, on different levels, is better for us, all of us, than competition.  I&#8217;d also like to posit some behaviour hacks that might aid in the transition to cooperation.  Lastly, at the end of this post you should be left considering where competition is present in your team/organization and it if is worthwhile or not.</p>
+
+<h2>What&#8217;s Wrong?</h2>
+
+<p>Lately, some of the DevOps heavy hitters (@botchagalupe, @therealgenekim) have been discussing the teachings and achievements of a scholar by the name of Deming.  He puts in best:</p>
+
+<blockquote><p>&#8220;the present style of management is a modern invention and represents &#8220;a prison created by the way in which people interact.&#8221; The present system includes competition between people, teams, departments, divisions, students, schools and universities. Although economists have taught that competition will solve our problems, we now know that competition is destructive. A better approach is for everyone to work together as a system. The solution to problems comes from cooperation, not competition.&#8221;  <br/>
+<a href="http://www.maaw.info/ArticleSummaries/ArtSumDeming93.htm" title="The New Economics for Industry, Government &amp; Education">-Deming, W. E. 1993. The New Economics For Industry, Government &amp; Education. Cambridge: Massachusetts Institute of Technology Center for Advanced Engineering Study.</a></p></blockquote>
+
+<p>I could not put it better myself!  So, I have no desire to live out my career in a veritable prison so let us shift gears to talk about cooperation in greater detail.</p>
+
+<h2>Cooperation Interesting Facts</h2>
+
+<p>Some of the information I am about to share with you came from a wonderful documenatary titled <em>&#8220;I am&#8221;</em> directed by Tom Shadyac.  It is worth a watch so check it out <a href="http://iamthedoc.com/">here</a> or <a href="https://itunes.apple.com/ca/movie/i-am/id477447848">here</a>.</p>
+
+<p>Biology is a wonderful science to draw from when looking to understand cooperation.  Here, as introduced by the documentary <em>I am</em>, the tale of &#8216;group based consensus decision making&#8217; is demonstrated wonderfully by a herd of Red Deer.  When a herd is in the meadow eating it is faced with a difficult choice about <em>when</em> the herd should move towards the watering hole to hydrate.  Go too soon, and some herd members will be under nourished.  Go too late and some herd members will be dehydrated.  In either instance, the herd as a whole will be compromised in it&#8217;s ability to adapt to threats.  So how do the deer solve this problem?  The answer, it turns out, is democracy.  In nature it is not the alpha deer that decides when the herd will move, it is the majority.  Simply put, once the majority of the deer are looking up from the grass and in the direction of the watering hole that is the signal for the collective to move onto the watering hole.  Again, I&#8217;m an engineer so don&#8217;t take my word for it.  Read up on it for yourself: <a href="http://www.wildmovement.com/the-51st-deer-cooperation-vs-competition">Red Deer</a>. Some would call this emergent behaviour, others democracy, but the animals call it staying alive.  Funny that…</p>
+
+<p>Now before you rail that I am a pinko commie bastard and point out that capitalism is the best invention since sliced bread bear with me here.  I know that deer are prey animals and humans are predators and it would be reasonable to suggest that prey based decision economics differ from predator based decision economics. If you think humans are not predators take look at the spacing of a humans eyes to those of a deer (binocular vs monocular).  Humans have depth perception where deer do not.  Conversely, deer have an exceedingly large field of view compared to humans.  Focus and depth perception are predatory traits and humans need to be able to pounce, judge distances, throw things and generally kill other animals as part of our diet to survive we are most certainly predators.  Deer need to be able to see said humans and run away.  There is no doubt about it, humans are the apex predator of the planet inspite of there being many other predators that are superior to us in many ways.  See below for an example.</p>
+
+<p><img src="https://s3.amazonaws.com/rdot-personal/blog/cooperation/t-rex.png" title="T-Rex" alt="alt text" /></p>
+
+<p>On any given day, I am going to say that T-Rex wins this encounter.  I saw Jurassic Park and I fear only two things: Tyrannosaurus Rex and Aliens of the James Cameron/Ridley Scott variety.  Ergo, I consider myself an expert in all things T-Rex-ish and extremely grateful for the fact that humans can cooperate.  Why? Because with the help of my friends and some technology, I feel confident that we could handle a T-Rex. Please see below:</p>
+
+<p><img src="https://s3.amazonaws.com/rdot-personal/blog/cooperation/Trexchainsaw.jpg" title="T-Rex" alt="alt text" /></p>
+
+<p>Therein is my subtle point.  Even predators, who have competitive tendencies, excel at cooperation.  Orcas in pods, hyenas, wolves, and honey badgers in packs, crows in murders, owls in parliments and yes, T-Rexes in gangs. So face it human being, you are wired to cooperate even though you are a savage predator! In fact, there is plenty of evidence that working cooperatively in groups towards a goal makes humans feel good.  Conversely, a group of humans being coerced to do something makes them feel like crap.  Don&#8217;t believe me? I&#8217;ll find someone to micromanage you for a week.</p>
+
+<p>The DevOps landscape is littered with wonderful examples of teams working together well.  @Allspaw&#8217;s beer test is a wonderful measure of a team working together.  Still, all these examples of working well in a crisis are fine-n-dandy and well described but no one is talking about the normal day and how you get a group focused on a singular purpose.  Because, let&#8217;s face it, nothing gets done without cooperation or coercion (which is merely forced cooperation).</p>
+
+<p>Cooperation is hard and poorly understood by many of us in management.  I suggest to you that there are 4 levels at which cooperation needs to be nourished for a person/team/organization/society to flourish.  The challenge is that as you empower cooperation through the levels there is a cooresponding difficulty increases that is exponentially related.  At the start you have the cooperation between people, then on a team, then groups of teams, then between organziations.  The difficulty is represented in the truly scientific diagram below.</p>
+
+<p><img src="https://s3.amazonaws.com/rdot-personal/blog/cooperation/AsymptoteDifficulty.png" alt="alt text" /></p>
+
+<p>Remember, you are here because you do not scare easily and you have a strong sense of perservereance.  Of course you do!  You&#8217;re still reading. Fear not, dear reader, there are ways to help cooperation become a staple in the existence of your team, teams, and organizations inspite of the convincingly displayed challenges.</p>
+
+<h2>Cooperation at Level 1</h2>
+
+<p>Cooperation at the very base is two people working together.  That is all.  This can also be the hardest cooperation to achieve. The best way to get two people working together is to give them a common goal, a purpose, a why, a reason to combine their talents and produce something from their joint effort.  Let us look at an example:</p>
+
+<p><img src="https://s3.amazonaws.com/rdot-personal/blog/cooperation/Frozen-pool-cannonball-dive.gif" alt="alt text" /></p>
+
+<p>This is a rather entertaining example yet it illustrates the point that is crucial: two people: one goal.  In this case the goal was to make an amazing video about the ever challenging topic of &#8216;poor life choices&#8217;.  I think we can all agree, mission accomplished.</p>
+
+<p>In conclusion, to foster cooperation at level 1 the behaviour hack is simple to state, harder to achieve: <em>Provide a Common Goal</em></p>
+
+<h2>Cooperation at Level 2</h2>
+
+<p>Level 2 focuses on fostering cooperation with a team.  Essentially we&#8217;re looking at groups larger than 2 and constrained by a single functional business unit and a single upline report. There are several crucial ideas to build cooperation within a team:</p>
+
+<ul>
+<li>Remove Hierarchy and Ranking <a href="Link">^1</a><br/>
+Ranking and pecking orders are horrible practices that directly promote competition.  A wonder example of this terrible practice is Microsoft.  Read about it <a href="http://www.vanityfair.com/online/daily/2012/07/microsoft-downfall-emails-steve-ballmer.print">here</a>. Instead, set your team up as a system and understand how it fits into the overall system that is your business.  Judge the output of the team as it relates to the system and tune it from there.</li>
+<li>Decentralize Decision Making <a href="Link">^2</a><br/>
+I suggest that if a team knows why it exists, has been empowered and has strong communication it will not need to seek approval to do the right things for the business.  This transformation is facilitated by the manager of the team.</li>
+<li>Leadership instead of Management <a href="Link">^3</a><br/>
+Management should be focused on the system of the business and less on turf and visibility.  Leadership emerges when ego is surrendered and in its place is a you find a strong listener with the ability to manage and understand the interdependencies between people, team, business units, and customers.</li>
+</ul>
+
+
+<p>So where would we look for a shining example of cooperation for level 2?  Well you could always call the A-Team but why don&#8217;t we look at Bradley Wiggins&#8217; Tour de France team for 2012?  Team Sky built the team it fielded for the 2012 tour well in advance gave them a clear single purpose.</p>
+
+<blockquote><p>&#8221; It was programmed from last year (2011) to win the Tour in July. They started working on this project more than a year before the Tour started. They got everyone on board on the team to make sure the riders were in the best shape, with the best material, the best coaching and training. They left nothing to chance.&#8221; <a href="http://velonews.competitor.com/2012/11/news/bernhard-eisel-speaks-about-athletes-panel-sky-shakeups-and-cycling-post-armstrong_266083">Bernhard Eisel, Rider for Team Sky</a></p></blockquote>
+
+<p>Communication was clear, everything for Brad and the results are <a href="http://www.guardian.co.uk/sport/blog/2012/jul/20/tour-de-france-2012-team-sky">impressive</a>.</p>
+
+<p>The behaviour hack for team based cooperation is simple to discuss but challenging to implement:  Transparent Communication.</p>
+
+<h2>Cooperation at Level 3</h2>
+
+<p>Cooperation between teams! Is this not the heart of the DevOps matter? Honestly, I cannot think of a concept that is more obvious and yet hardly present in the construct of North American business.  Here are some of the crucial ideas to empower different teams to cooperate with each other.</p>
+
+<ul>
+<li>Destroy any and all inter-team competition:<br/>
+<img src="https://s3.amazonaws.com/rdot-personal/blog/cooperation/ackbar.gif" alt="ackbar" /><br/>
+When teams within a business compete it destroys any hope of building quality into the organization.  A sales team will throw crappy leads at an account management team to drive numbers and look good and leave the account managers holding the bag.  Dev will throw code over the wall to QA that is garbage.  Ops will be obstructionist if they are optimized for stability and not change.</li>
+<li>The business is a system!  Articulate how each team is connected, it is never &#8216;us versus them&#8217; as the output from one team is the input for another.</li>
+<li>Elimination of Fear<br/>
+Just Culture advocates provide the strongest case for the elimination of fear within a business.  I reccomend Sidney Dekker&#8217;s work or just start <a href="http://www.justculture.org/">here</a> to start on a journey that will transform your business.</li>
+</ul>
+
+
+<p>Inter-team cooperation is a huge and career defining journey.  An interesting example of a business that is thriving with this type of a model is github.  Check it out <a href="http://zachholman.com/posts/how-github-works/">here</a>.  Keep in mind that what Github terms as anarchy is just the application of zero hierarchy and true democracy.</p>
+
+<p>In the previous sections I have left you with a behaviour hack that might perpetuate the concept we have discussed.  For inter-team cooperation the most important behaviour hack is <em>Executive Air Cover</em>.  There is no way to be successful in transforming teams to work together without strong sponsorship from the top.</p>
+
+<h2>Cooperation at Level 4</h2>
+
+<p>If getting people, teams, groups of teams cooperating is not enough of a challenge for you then how about getting separate organizations cooperating? Welcome to cooperation level 4; ladies and gentlemen strap in because this is nearly impossible with business as we know it today.  Well, almost impossible.  Here the DevOps movement has been bucking this trend quite well.</p>
+
+<p>Velocity, DevOpsDays, and all the individual meetups that take place all over the globe are the only example I need to present on inter-organization cooperation. Yet, there are so many more: Netflix open sourcing the Simian army, Etsy and StatsD/Deployinator, Ruby on Rails …</p>
+
+<p>The example I&#8217;d like to leave you all with for inter-organizational cooperation is this: <a href="http://codeascraft.etsy.com/2012/09/10/the-engineer-exchange-program/">The Etsy-Twitter engineering exchange program.</a>  Here we have two completely separate organiztaions exchanging techincal talent so they can learn from each other.  That&#8217;s amazeballs.  I don&#8217;t purport to have a clue on how to encourage that kind of behaviour other than sharing this example with you and hopefully encouraging my organization to do something similar.</p>
+
+<h2>Conclusion</h2>
+
+<p>My goal was to present supporting evidence that cooperation is a behaviour that returns more value than competition.  I hope I have achieved that goal and entertained you in the process.  If I could leave you with one thought it would be this: Operational teams have a wonderful opportunity to transform the way things are done in all industries so long as we consider people in addition to technology.  People are the most important part of the system.</p>
 </div>
   
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/10/28/cooperation-v1/">Read on &rarr;</a>
-    </footer>
   
 
 
@@ -497,56 +705,6 @@ setting up a chef cookbook soon.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/01/logging-as-a-service/">Logging as a Service</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-01T20:23:00-07:00" pubdate data-updated="true">Feb 1<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/02/01/logging-as-a-service/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve been running into a logging challenge at work of late.  The usual issue.
-Lots of logs, in lots of places, retention policies, governance issues,
-reporting and (in my humble opinion the most important) support/debugging.  After some searching I
-found logg.ly and Papertrail which offered what I wanted as a service.  Very
-sweet.  Unfortunately I cannot use them in this implementation so I am pursuing
-Graylog2 and logstash (another blogpost on that later). Right now I&#8217;m plugging
-Papertrail into our demo system to see how it goes and how it fits with our
-workflow.  I just wanted to cover off some first impressions with Papertrail.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/02/01/logging-as-a-service/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -562,6 +720,10 @@ workflow.  I just wanted to cover off some first impressions with Papertrail.</p
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/10/31/not-minding/">Failure Hurts</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/09/jeet-kune-devops/">Jeet Kune DevOps</a>
       </li>
     
@@ -575,10 +737,6 @@ workflow.  I just wanted to cover off some first impressions with Papertrail.</p
     
       <li class="post">
         <a href="/blog/2012/07/25/why-my-team-exists/">Why My Team Exists*</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/22/update-and-a-fresh-start/">Update and a Fresh Start</a>
       </li>
     
   </ul>
@@ -640,7 +798,7 @@ workflow.  I just wanted to cover off some first impressions with Papertrail.</p
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Robert Woolley -
+  Copyright &copy; 2013 - Robert Woolley -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

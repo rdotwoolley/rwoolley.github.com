@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>zendesk - rdotwoolley</title>
+  <title>Failure Hurts - rdotwoolley</title>
   <meta name="author" content="Robert Woolley">
 
   
-  <meta name="description" content="We use zendesk and I will admit, I&#8217;m a huge fan. We had the opportunity to retool our support system and a subtle suggestion from @ &hellip;">
+  <meta name="description" content="The trick, William Potter, is not minding that it hurts.T.E. Lawrence and David8 Lawrence of Arabia and Prometheus As the Internet, technology and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rwoolley.github.com/blog/2012/03/05/zendesk">
+  <link rel="canonical" href="http://rwoolley.github.com/blog/2013/10/31/not-minding">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Zendesk</h1>
+      <h1 class="entry-title">Failure Hurts</h1>
     
     
       <p class="meta">
@@ -96,7 +96,7 @@
   
 
 
-<time datetime="2012-03-05T20:19:00-07:00" pubdate data-updated="true">Mar 5<span>th</span>, 2012</time>
+<time datetime="2013-10-31T21:31:00-06:00" pubdate data-updated="true">Oct 31<span>st</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -105,46 +105,64 @@
   </header>
 
 
-<div class="entry-content"><p><img src="http://a.yfrog.com/img612/170/bnjk.png" alt="zendesk Logo" /></p>
+<div class="entry-content"><p><img src="https://s3.amazonaws.com/rdot-personal/blog/notMinding.jpg" alt="The trick is not minding that it hurts" /></p>
 
-<p>We use <a href="http://zendesk.com">zendesk</a> and I will admit, I&#8217;m a huge fan.  We had the opportunity to retool our support system and a subtle suggestion from @ericchernuka led us to check out zendesk and what they were cooking.  Of course, if I&#8217;m going to rave about something I&#8217;m going to tell you why, in depth, because that&#8217;s what I do!  So, read on if you want to know about my favorite bits of zendesk in detail.  As a preview my love for zendesk is in part due to: SaaS, iOS/Android app, triggers, macros and integration!</p>
-
-<!-- more -->
+<blockquote><p>The trick, William Potter, is not minding that it hurts.</p><footer><strong>T.E. Lawrence and David8</strong> <cite>Lawrence of Arabia and Prometheus</cite></footer></blockquote>
 
 
-<h3>SaaS</h3>
+<p>As the Internet, technology and consumers collide we often hear, &#8216;What are you going to do to ensure this <em>never happens again.</em>&#8217; For awhile, this really bothered me and it was simple to get me from my zenlike calm to ultra rage with that sentence. While I am sure we all endevaour for failure to not occur, it does. Thermodynamics tell us that closed systems alway seek a state of maximum entropy and so it goes in Web Operations.  This is why our entire existence is formed around MTTR.  One day, in my state of annoyance with my inability to project certainty, I came across this tweet from Mark Burgess:</p>
 
-<p>zendesk is clearly SaaS. You&#8217;re thinking yay, big deal… but it is.  We&#8217;re still operating lean and the ability to ramp up or down on the support side of the business is huge to me.  Add in the fact that we went from nothing to a full on support system in weeks is very nice as well.  zendesk has a huge strength in that it is designed for support and support only.  The workflow is clean and tight and you can move through supporting a client with product issues quickly.  If you tie in your support KB you&#8217;re even further ahead because you can extend the service you offer and invite your clients into trackable forums.  A broad set of metrics can be used to constantly allow you to refine the support experience and content delivery.</p>
+<blockquote><p>The trick is to create meaning from failure.</p><footer><strong>@markburgess_osl</strong> <cite><a href='https://twitter.com/markburgess_osl/status/272680024912560128'>twitter.com/markburgess_osl/&hellip;</a></cite></footer></blockquote>
 
-<h3>Mobile Apps</h3>
 
-<p>This is really nice to have.  Support is like shit, it just happens.  It&#8217;s nice to have apps that keep me connected to the helpdesk and even interact with the issues as they come it. The convenience is stellar.</p>
+<p>I was missing the point. All along, I thought there was nothing meaningful in failure (and no one needs nothing) but as it turns out, there is a great deal of meaning if you can get past the hurt.  Here&#8217;s the pattern I employ:</p>
 
-<h3>Triggers and Avoiding SLA Dread</h3>
+<h3>Assumptions</h3>
 
-<p>We&#8217;re subject to some nasty audits.  Our SLAs are held with a revere that can only be called biblical.  We used to stress about making sure SLAs were met a great deal.  Then we automated those damn things and finally got some sleep.  To accomplish this, we used the trigger functionality and we can tailor the SLAs for each organization and ensure we&#8217;re nagging or getting nagged when the clock starts running out.  Some DevOps mottos extend even to support: automate nearly everything.</p>
+<ol>
+<li>There is some type of metrics collection in use so you can measure response to inputs</li>
+<li>There is a willingness to employ a continuous improvement loop</li>
+</ol>
 
-<h3>Macros</h3>
 
-<p>It is inevitable in the world of support: you will have to repeat yourself.  Luckily the zendesk designers recognized this and built the concept of a macro.  If you have a repeatable siutation on your hands you can simply build a macro and pa-POW apply that thing to issues that come in.  The joy? you can address issues even faster.</p>
+<h3>The &#8216;Lawrence of Arabia&#8217; Pattern</h3>
 
-<h3>Integration</h3>
+<h4>blameless post mortem</h4>
 
-<p>You can integrate EVERYTHING into zendesk.  Right now our integration buffet goes like this:</p>
+<p>You need to understand what happened and why it hurts.  It&#8217;s not enough to say the internet is hard and move on. As much as possible, quantify your pain.  Can you reduce an outage to dollars per minute?  Can you measure the impact on your brand reputation?  To get meaing from failure you simply must know what impact the failure has.  Here are some examples of how to enact the blameless postmrotem:</p>
 
 <ul>
-<li>GoodData</li>
-<li>Jira</li>
-<li>SalesForce</li>
-<li>gmail</li>
+<li><a href="http://codeascraft.com/2012/05/22/blameless-postmortems/">Etsy&#8217;s Postmortem Culture</a></li>
+<li><a href="http://aphyr.com/posts/288-the-network-is-reliable">Beatiful Collection of Postmortems from Aphyr</a></li>
 </ul>
 
 
-<p>I think that&#8217;s it but hey, we&#8217;re small.  We get stellar metrics from gooddata and use it as our support reporting dashboard.  zendesk issues are escalated to L3 through JIRA tapping into our engineering process with little impact.  Salesforce allows us to push data into the Salesteam without Ops munging in salesforce itself.  Lastly, it&#8217;s all email controlable for the people that don&#8217;t want to leave the comfort of their inbox.</p>
+<h4>one human correction</h4>
 
-<h3>One more thing</h3>
+<p>Once you have a bead on the pain the next step is to enact your continuous improvement loop.  With my team we always set the intention that we will make (at least) one human behaviour based improvement in the wake of an outage event.  We don&#8217;t mind that it hurt. We do want to make sure that the pain we feel next time is new and different.  Some exercises we enact to identify that human based improvement:</p>
 
-<p>If you&#8217;re looking at a support tool, seriously consider this option.  @mikecousins has even rolled it into his shuttr project and he&#8217;s a very discerning customer.  I love the efficiency, the reporting and the interface.  Support is still a tax but this makes it fun and fast.</p>
+<ul>
+<li>What business assumptions have changed?</li>
+<li>What technology assumptions have changed?</li>
+<li>What could we do to make it easier to do the right thing?</li>
+</ul>
+
+
+<h5>example</h5>
+
+<p>Once upon a time we suffered pain from hysterical stop the world GC events.  The human improvement was to find a way to post to a dashboard when these hysterical GCs were occuring so that, as the operator, we could quickly see that it was a GC loop and act accordingly.  A little graphite and a small daemon go a long way to minimizing MTTR.</p>
+
+<h4>one technology correction</h4>
+
+<p>Everything changes and changes fast.  What assumptions have you made about your technology collection in your complex system?  Are the queues queuing well? Is the JVM tuned for the way people use your system?  Can you do anything to catch this and make the feedback loop shorter?  I encourage the introspection so that one improvement is made on the technology side.</p>
+
+<h5>example</h5>
+
+<p>Let&#8217;s stay on the GC example for fun.  After torpedoing the heap the obvious tuning paramter is to merely add more.  Indeed, that was our first approach to buy some time. Our introspection kicked in and we realized that our user base had grown and their habits had evolved.  We then decided to look at a different JVM that would match more closely to how people used our software.</p>
+
+<h4>conclusion</h4>
+
+<p>If you were to take one thing away from this pattern I hope that it is the inspiration to find meaning in failure.  Like Lawrence of Arabia, there is beauty in the desert of failure and it you can withstand the pain it&#8217;s a wonderful way to improve what you do.</p>
 </div>
 
 
@@ -167,7 +185,7 @@
   
 
 
-<time datetime="2012-03-05T20:19:00-07:00" pubdate data-updated="true">Mar 5<span>th</span>, 2012</time>
+<time datetime="2013-10-31T21:31:00-06:00" pubdate data-updated="true">Oct 31<span>st</span>, 2013</time>
       
 
 
@@ -175,7 +193,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2012/03/05/zendesk/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2012/03/05/zendesk/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rwoolley.github.com/blog/2013/10/31/not-minding/" data-via="rdotwoolley" data-counturl="http://rwoolley.github.com/blog/2013/10/31/not-minding/" >Tweet</a>
   
   
   
@@ -184,10 +202,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/05/graylog2-and-dreamy-ocelots/" title="Previous Post: Graylog2 and Dreamy Ocelots">&laquo; Graylog2 and Dreamy Ocelots</a>
+        <a class="basic-alignment left" href="/blog/2012/12/09/jeet-kune-devops/" title="Previous Post: Jeet Kune DevOps">&laquo; Jeet Kune DevOps</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/26/new-flavour-of-lifesaver-fpm/" title="next Post: New Flavour of Lifesaver: FPM">New Flavour of Lifesaver: FPM &raquo;</a>
       
     </p>
   </footer>
@@ -299,8 +315,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rwoolley.github.com/blog/2012/03/05/zendesk/';
-        var disqus_url = 'http://rwoolley.github.com/blog/2012/03/05/zendesk/';
+        var disqus_identifier = 'http://rwoolley.github.com/blog/2013/10/31/not-minding/';
+        var disqus_url = 'http://rwoolley.github.com/blog/2013/10/31/not-minding/';
         var disqus_script = 'embed.js';
       
     (function () {
